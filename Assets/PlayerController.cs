@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public float rotation = 0.5f;
 
 	private Vector2 _rotation = new Vector2(0, 0);
+	public int _canJump = 0;
 	private Rigidbody _rb;
 
 	public void Start () {
@@ -34,5 +35,19 @@ public class PlayerController : MonoBehaviour {
 			_rb.AddForce(Vector3.forward * value * speed);
 			_rotation.y = value;
 		}
+	}
+
+	public void OnJump(float value) {
+		if (value > 0 && _canJump > 0) {
+			_rb.AddForce(transform.up * 500);
+		}
+	}
+
+	public void OnCollisionEnter (Collision col) {
+		_canJump++;
+	}
+
+	public void OnCollisionExit (Collision col) {
+		_canJump--;
 	}
 }

@@ -28,6 +28,6 @@ public class CameraController : MonoBehaviour {
 		// Position and rotate the camera
 		transform.position = new Vector3(average.x, Mathf.Max(distance, cameraMinimum), average.z);
 		transform.rotation = _originalRotation;
-		transform.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance, -90));
+		transform.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance, -85));
 	}
 }
