@@ -107,11 +107,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &131385247 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1364563939173202, guid: 18c26502e1d28b643a6e07d4b0748e17,
-    type: 2}
-  m_PrefabInternal: {fileID: 930676819}
 --- !u!1 &664008731
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,16 +493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1348ee15057fbfa46910e623046d6f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
-  - {fileID: 1275650044}
-  - {fileID: 131385247}
   cameraMinimum: 10
   cameraAngle: -45
---- !u!1 &1275650044 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1364563939173202, guid: 18c26502e1d28b643a6e07d4b0748e17,
-    type: 2}
-  m_PrefabInternal: {fileID: 1368560747}
 --- !u!1001 &1368560747
 Prefab:
   m_ObjectHideFlags: 0
