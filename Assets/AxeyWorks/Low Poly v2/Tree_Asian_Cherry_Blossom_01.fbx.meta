@@ -1,24 +1,19 @@
 fileFormatVersion: 2
 guid: ca4f429bff30e114a8b497d43f14b15e
-timeCreated: 1464873854
-licenseType: Store
+timeCreated: 1489420864
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Mesh1
-    100002: //RootNode
-    100004: Tree_Asian_Cherry_Blossom_01 1
-    400000: Mesh1
-    400002: //RootNode
-    400004: Tree_Asian_Cherry_Blossom_01 1
-    2300000: Mesh1
-    2300002: Tree_Asian_Cherry_Blossom_01 1
-    3300000: Mesh1
-    3300002: Tree_Asian_Cherry_Blossom_01 1
-    4300000: Mesh1
-    4300002: Tree_Asian_Cherry_Blossom_01
-    6400000: Mesh1
-    6400002: Tree_Asian_Cherry_Blossom_01 1
+    100000: //RootNode
+    100002: Tree_Asian_Cherry_Blossom_01 1
+    400000: //RootNode
+    400002: Tree_Asian_Cherry_Blossom_01 1
+    2300000: Tree_Asian_Cherry_Blossom_01 1
+    3300000: Tree_Asian_Cherry_Blossom_01 1
+    4300000: Tree_Asian_Cherry_Blossom_01
+    7400000: Take 001
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -26,9 +21,11 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -45,7 +42,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -65,6 +62,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -75,9 +73,12 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

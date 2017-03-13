@@ -20,14 +20,17 @@ public class CameraController : MonoBehaviour {
 		// Average the players position, to calculate the distance between the players.
 		Vector3[] positions = _players.Select(player => player.transform.position).ToArray();
 		Vector3 average = positions.Aggregate(new Vector3(0,0,0), (a,b) => a+b) / (float)positions.Length;
-		float distance = Vector3.Distance(
+		Vector3[] bounds = new Vector3[] {
 			new Vector3(positions.Min(p => p.x), Mathf.Max(positions.Min(p => p.y), 0), positions.Min(p => p.z)),
 			new Vector3(positions.Max(p => p.x), positions.Max(p => p.y), positions.Max(p => p.z))
-		);
+		};
+		float distance = Vector3.Distance(bounds[0], bounds[1]);
+		Vector3 normal = Vector3.Cross(bounds[0], bounds[1]);
 
 		// Position and rotate the camera
-		transform.position = new Vector3(average.x, Mathf.Max(distance, cameraMinimum), average.z);
+		transform.position = new Vector3(average.x, distance/1.5f + cameraMinimum, average.z);
 		transform.rotation = _originalRotation;
-		transform.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance, -85));
+		transform.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance/1.5f + cameraMinimum, -80));
+		// transform.RotateAround(average, Vector3.up, Mathf.Rad2Deg * Mathf.Atan(normal.z/normal.x)+90); // Almost works, but it switches over.
 	}
 }
