@@ -10,73 +10,46 @@ Material:
   m_Shader: {fileID: 4800000, guid: fbb4dcf61cad6e147a54ae35b277a2bc, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 3
+    serializedVersion: 2
     m_TexEnvs:
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8de8ef2a124c6f84087af03d88985285, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
+    - first:
+        name: <noninit>
+      second:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 1
-    - _Parallax: 0.02
-    - _RandomHeight: 0.1
-    - _RandomSpeed: 5
-    - _Shininess: 0.5
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _WaveHeight: 1
-    - _WaveLength: 1
-    - _WaveSpeed: 2
-    - _ZWrite: 1
+    - first:
+        name: <noninit>
+      second: 0
+    - first:
+        name: _RandomHeight
+      second: 1
+    - first:
+        name: _RandomSpeed
+      second: 1
+    - first:
+        name: _Shininess
+      second: 1
+    - first:
+        name: _WaveHeight
+      second: 1
+    - first:
+        name: _WaveLength
+      second: 1
+    - first:
+        name: _WaveSpeed
+      second: 1
     m_Colors:
-    - _Color: {r: 0.33866784, g: 0.44259045, b: 0.5294118, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - first:
+        name: <noninit>
+      second: {r: 0, g: 0.80892134, b: 0, a: 0.8089175}
+    - first:
+        name: _Color
+      second: {r: 0.18041737, g: 0.38068998, b: 0.52205884, a: 1}
+    - first:
+        name: _SpecColor
+      second: {r: 1, g: 1, b: 1, a: 1}
