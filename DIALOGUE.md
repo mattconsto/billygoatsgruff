@@ -12,9 +12,9 @@ NARATE	The choice was clear, the journey over. The little billy-goat hid in a co
 NARATE	The little billy-goat ventured into the herd. Ready to approach one, in search of adventure.
 	MIDDLE	What's that little goat?
 		LITTLE	Last night I dreamed of a field, on a hill, with a bridge. We should find it.
-			MIDDLE	Adventure you say, that sounds grand. I'll follow you billy-goat across these lands.
+			MIDDLE	Adventure you say, that sounds grand. I'll follow you billy-goat, across these lands.
 		LITTLE	I want to leave, I'm bored of this place.
-			MIDDLE	Not right now can't you see, I'm as busy as can be!
+			MIDDLE	Not right now, can't you see, I'm as busy, as can be!
 	BIG	What's wrong pipsqueak?
 		LITTLE	I dreamed of leaving this place, gaining my freedom, in a wide open space.
 			BIG	Greener fields, wide open space? I'll follow you pipsqueak.
@@ -73,12 +73,12 @@ TROLL	Who’s THAT tripping over my bridge?
 	MIDDLE	Oh! It’s the second billy-goat Gruff, and I’m going up to the hill-side to make myself fat.
 		TROLL	Now, I’m coming to gobble you up.
 		NARATE	And with that, the second billy-goat was no more.
-	MIDDLE	Oh, no! don’t take me, wait a little till the big billy-goat Gruff comes, he’s much bigger.
+	MIDDLE	Oh, no! don’t take me, wait a little longer until the big billy-goat Gruff comes, he’s much bigger.
 		TROLL	Very well! be off with you
 
 BRIDGE	TRIP, TRAP! TRIP, TRAP! TRIP, TRAP!
 TROLL	WHO’S THAT tramping over my bridge?
-	BIG	BAH IT IS I! THE BIG BILLY-GOAT GRUFF #18
+	BIG	BAH IT IS I! THE BIG BILLY-GOAT GRUFF
 	TROLL	Now, I’m coming to gobble you up
 		BIG	Well, come along! I’ve got two spears,
 		BIG	I’ll poke your eyeballs out of your ears.
