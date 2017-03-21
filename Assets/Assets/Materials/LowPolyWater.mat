@@ -105,10 +105,10 @@ Material:
       second: 0.02
     - first:
         name: _RandomHeight
-      second: 2.5
+      second: 2
     - first:
         name: _RandomSpeed
-      second: 3
+      second: 4
     - first:
         name: _Shininess
       second: 31.06
@@ -120,10 +120,10 @@ Material:
       second: 0
     - first:
         name: _WaveHeight
-      second: 2.5
+      second: 3
     - first:
         name: _WaveLength
-      second: 1
+      second: 3
     - first:
         name: _WaveSpeed
       second: 2
