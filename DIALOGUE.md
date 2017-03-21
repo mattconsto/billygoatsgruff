@@ -1,6 +1,6 @@
 # CALL
 
-NARATE	One upon a time there was a little billy-goat in the herd of "Gruff", who longed for adventure beyond his paddock.
+NARATE	Once upon a time, there was a little billy-goat "gruff", who longed for adventure beyond his paddock.
 NARATE	That very night he had dreamed of a field, and a bridge, and a forest, and a choice. What could it mean?
 
 # REFUSAL
@@ -59,7 +59,7 @@ NARATE	Around and around the billy-goats go, picking the wrong path at every tur
 
 # FIGHT
 
-NARATE	At last there's the field, but what would you know, there's a big ugly troll who won't let you through.
+NARATE	At last there's the field, but what would you know, there's a big ugly troll who won't let you go.
 
 BRIDGE	Trip, trap! trip, trap!
 TROLL	Who’s that tripping over my bridge?
@@ -88,8 +88,10 @@ TROLL	WHO’S THAT tramping over my bridge?
 
 # RETURN
 
-NARATE	That was what the big billy-goat said; and so he flew at the Troll and poked his eyes out with his horns, and crushed him to bits, body and bones, and tossed him out into the burn, and after that he went up to the hill-side. There the billy-goats got so fat they were scarce able to walk home again; and if the fat hasn’t fallen off them, why they’re still fat; and so: Snip, snap, snout, This tale’s told out.
+NARATE	And so he flew at the Troll and poked his eyes out with his horns. He crushed him to bits, body and bones, tossing him out into the burn.
+NARATE	The billy-goats went up to the hillside where they got so fat they were scarce able to walk home again! And if the fat hasn’t fallen off them, why they’re still fat; and so: Snip, snap, snout, This tale’s told out.
 
 # MISC. ENDINGS
 
-NARATE	As the billy-goats stood around, the day got longer and longer. Before they knew it, the day was now over.
+NARATE	As the billy-goats stood around, the day grew longer and longer. Before they knew it, the day was now over.
+NARATE	Wait! How did you get out here?
