@@ -64,13 +64,13 @@ NARATE	At last there's the field, but what would you know, there's a big ugly tr
 BRIDGE	Trip, trap! trip, trap!
 TROLL	Who’s that tripping over my bridge?
 	LITTLE	Oh! it is only I, the tiniest billy-goat Gruff; and I’m going up to the hill-side to make myself fat
-		TROLL	Now, I’m coming to gobble you up
+		TROLL	Now, I’m coming to gobble you up.
 		NARATE	And with that, the tiniest billy-goat was no more.
 	LITTLE	Oh, no! pray don’t take me. I’m too little, that I am. Wait a bit till the second billy-goat Gruff comes, he’s much bigger.
 		TROLL	Well! be off with you
 
 BRIDGE	Trip, trap! trip, trap! trip, trap!
-TROLL	WHO’S THAT tripping over my bridge?
+TROLL	Who’s THAT tripping over my bridge?
 	MIDDLE	Oh! It’s the second billy-goat Gruff, and I’m going up to the hill-side to make myself fat.
 		TROLL	Now, I’m coming to gobble you up.
 		NARATE	And with that, the second billy-goat was no more.
