@@ -47,7 +47,7 @@ NARATE	Taking the right path the billy-goats see, a wall of crates tower over th
 
 NARATE	The little billy-goats wander along, until just out of sight is the most beautiful doe.
 
-FEMALE	Hello! I am lost and in need of help. Lets stay a while, just with ourselves.
+FEMALE	Hello! I am lost and in need of some help. Lets stay a while, just by ourselves.
 FEMALE	You may have heard tales of fields and trolls, but there is nothing but hardship if you continue along.
 	ANY	I'm sorry doe, I'd love to stay. But a field calls us, we are on our way.
 	ANY	The journey is weary, we'd love to stay.
