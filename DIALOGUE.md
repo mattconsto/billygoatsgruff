@@ -78,10 +78,10 @@ TROLL	Who’s THAT tripping over my bridge?
 
 BRIDGE	TRIP, TRAP! TRIP, TRAP! TRIP, TRAP!
 TROLL	WHO’S THAT tramping over my bridge?
-	BIG	IT’S I! THE BIG BILLY-GOAT GRUFF
+	BIG	BAH IT IS I! THE BIG BILLY-GOAT GRUFF #18
 	TROLL	Now, I’m coming to gobble you up
 		BIG	Well, come along! I’ve got two spears,
-		BIG	I’ll poke your eyeballs out at your ears.
+		BIG	I’ll poke your eyeballs out of your ears.
 		BIG	I’ve got besides two curling-stones,
 		BIG	And I’ll crush you to bits, body and bones.
 
