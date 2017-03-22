@@ -29,17 +29,3 @@ TODO
 * Clipping
 * Menu
 * Controls screen
-
-## Voicelines
-
-LITTLE	Oooh, the water's cold.
-LITTLE	Where's my brother?
-LITTLE	Where's my big brother?
-LITTLE	Where are the others?
-MIDDLe	Brrrrrrrr
-MIDDLE	Where's my little bother?
-MIDDLE	Where's my big brother?
-MIDDLE	Where are the others?
-BIG	Where's pipsqueak?
-BIG	Where's my brother?
-BIG	Where are the others?

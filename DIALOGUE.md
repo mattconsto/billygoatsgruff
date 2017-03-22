@@ -52,6 +52,9 @@ FEMALE	You may have heard tales of fields and trolls, but there is nothing but h
 	LITTLE	The journey is weary, we'd love to stay.
 		NARATE	For the little billy-goats the journey was over. Content to stay in the forest forever.
 
+LITTLE	Oooh, the water's cold.
+MIDDLE	Brrrrrrrr
+
 # FATHER
 
 NARATE	Around and around the billy-goats go, picking the wrong path at every turn. Will they realise? Only time can know.
@@ -98,3 +101,13 @@ NARATE	Wait! How did you get out here?
 LITTLE	bah
 MIDDLE	Bah
 BIG	BAH
+
+LITTLE	Where's my brother?
+LITTLE	Where's my big brother?
+LITTLE	Where are the others?
+MIDDLE	Where's my little bother?
+MIDDLE	Where's my big brother?
+MIDDLE	Where are the others?
+BIG	Where's pipsqueak?
+BIG	Where's my brother?
+BIG	Where are the others?
