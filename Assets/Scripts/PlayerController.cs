@@ -40,10 +40,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void OnCollisionEnter (Collision col) {
-		_canJump++;
+		if(col.gameObject.tag == "Jumpable") _canJump++;
 	}
 
 	public void OnCollisionExit (Collision col) {
-		_canJump--;
+		if(col.gameObject.tag == "Jumpable") _canJump--;
 	}
 }
