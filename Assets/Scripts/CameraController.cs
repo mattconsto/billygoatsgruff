@@ -19,17 +19,17 @@ public class CameraController : MonoBehaviour {
 		_players = GameObject.FindGameObjectsWithTag("Player");
 
 		// Needs to run twice, not sure why.
-		Update(); LerpTransform(transform, cameraTarget, 1);
-		Update(); LerpTransform(transform, cameraTarget, 1);
+		FixedUpdate(); LerpTransform(transform, cameraTarget, 1);
+		FixedUpdate(); LerpTransform(transform, cameraTarget, 1);
 	}
 
-	public static void LerpTransform (Transform t1, Transform t2, float t) {
+	public static void LerpTransform(Transform t1, Transform t2, float t) {
 		t1.position   = Vector3.Lerp(t1.position, t2.position, t);
 		t1.rotation   = Quaternion.Lerp (t1.rotation, t2.rotation, t);
 		t1.localScale = Vector3.Lerp(t1.localScale, t2.localScale, t);
 	}
 
-	public void Update () {
+	public void FixedUpdate() {
 		// Average the players position, to calculate the distance between the players.
 		if(cameraLocked) {
 			Vector3[] positions = _players.Where(player => player.activeSelf).Select(player => player.transform.position).ToArray();
@@ -42,7 +42,7 @@ public class CameraController : MonoBehaviour {
 			// Vector3 normal = Vector3.Cross(bounds[0], bounds[1]);
 
 			// Position and rotate the camera
-			cameraTarget.position = new Vector3(average.x, distance/1.5f + cameraDMinimum, average.z);
+			cameraTarget.position = new Vector3(average.x, average.y + distance/1.5f + cameraDMinimum, average.z);
 			cameraTarget.rotation = _originalRotation;
 			cameraTarget.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance/1.5f - cameraAMinimum, -80));
 		}

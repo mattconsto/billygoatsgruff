@@ -27,10 +27,16 @@ public class PlayerController : MonoBehaviour {
 			);
 		}
 
-		_rb.AddForce(Vector3.right * _rotation.x * speed);
-		_rb.AddForce(Vector3.forward * _rotation.y * speed);
+		// Minimise strafing
+		if(_canJump > 0) {
+			_rb.AddForce(Vector3.right * _rotation.x * speed);
+			_rb.AddForce(Vector3.forward * _rotation.y * speed);
+		}
 
-		if (Input.GetAxis("Jump") > 0 && _canJump > 0) _rb.AddForce(transform.up * jump);
+		if (Input.GetAxis("Jump") > 0 && _canJump > 0) {
+			_rb.AddForce(transform.up * jump);
+			_rb.AddForce(-transform.forward * jump);
+		}
 	}
 
 	public void OnCollisionEnter (Collision col) {

@@ -30,7 +30,7 @@ public class WorldStateMachine : MonoBehaviour {
 
 	public void FixedUpdate() {
 		// Lerp forwards towards desired time
-		currentTime = Mathf.Lerp(currentTime, targetTime, 0.25f * Time.deltaTime);
+		currentTime = InterpolatedLerp(currentTime, targetTime, 0.25f * Time.deltaTime, 24);
 
 		float angle = 2 * Mathf.PI * ((currentTime + 18f) % 24f) / 24f;
 
@@ -44,20 +44,28 @@ public class WorldStateMachine : MonoBehaviour {
 		audioObjectB.volume = Mathf.Lerp(audioObjectB.volume, audioObject ? 0 : 1, 0.25f * Time.deltaTime);
 	}
 
+	public static float InterpolatedLerp(float a, float b, float t, float l) {
+		float num = Mathf.Repeat(b - a, l);
+		if(num > l/2f) num -= l;
+		return a + num * Mathf.Clamp01(t);
+	}
+
 	public void Change(int value) {
-		pointer = Mathf.Clamp(value, 0, _machine.Length - 1);
-		targetTime = State().time > targetTime ? State().time : State().time + 24;
+		if(pointer != value || Time.time == 0) {
+			pointer = Mathf.Clamp(value, 0, _machine.Length - 1);
+			targetTime = State().time > targetTime ? State().time : State().time + 24;
 
-		audioObject = !audioObject;
+			audioObject = !audioObject;
 
-		if(audioObject) {
-			audioObjectA.loop = State().loop;
-			audioObjectA.clip = State().music;
-			audioObjectA.Play();
-		} else {
-			audioObjectB.loop = State().loop;
-			audioObjectB.clip = State().music;
-			audioObjectB.Play();
+			if(audioObject) {
+				audioObjectA.loop = State().loop;
+				audioObjectA.clip = State().music;
+				audioObjectA.Play();
+			} else {
+				audioObjectB.loop = State().loop;
+				audioObjectB.clip = State().music;
+				audioObjectB.Play();
+			}
 		}
 	}
 
