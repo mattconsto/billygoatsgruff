@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour {
 	public GameObject titleHud;
 	public GameObject gameHud;
 
-	public GameObject camera;
+	public GameObject dynamicCamera;
 	
 	public void Update () {
 		
@@ -23,6 +23,6 @@ public class GameController : MonoBehaviour {
 	public void Begin() {
 		titleHud.SetActive(false);
 		gameHud.SetActive(true);
-		camera.GetComponent<CameraController>().cameraLocked = true;
+		dynamicCamera.GetComponent<CameraController>().cameraLocked = true;
 	}
 }

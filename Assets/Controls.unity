@@ -3039,7 +3039,7 @@ MonoBehaviour:
   time: 0
   titleHud: {fileID: 2117391888}
   gameHud: {fileID: 1718207559}
-  camera: {fileID: 1068433175}
+  dynamicCamera: {fileID: 1068433175}
 --- !u!4 &1745283056
 Transform:
   m_ObjectHideFlags: 0

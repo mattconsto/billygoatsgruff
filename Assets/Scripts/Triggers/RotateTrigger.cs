@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class RotateTrigger : MonoBehaviour {
 	public float time;
@@ -22,7 +21,7 @@ public class RotateTrigger : MonoBehaviour {
 
 	public void OnCollisionEnter(Collision col) {
 		// Start rotating
-		if(!moved && (objects != null || ArrayUtility.Contains(objects, col.gameObject)) && col.impulse.magnitude >= impulse) {
+		if(!moved && (objects != null || System.Array.IndexOf(objects, col.gameObject) != -1) && col.impulse.magnitude >= impulse) {
 			timer = time;
 			moved = true;
 		}

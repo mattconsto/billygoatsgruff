@@ -32,14 +32,14 @@ public class CameraController : MonoBehaviour {
 	public void Update () {
 		// Average the players position, to calculate the distance between the players.
 		if(cameraLocked) {
-			Vector3[] positions = _players.Where(player => player.active).Select(player => player.transform.position).ToArray();
+			Vector3[] positions = _players.Where(player => player.activeSelf).Select(player => player.transform.position).ToArray();
 			Vector3 average = positions.Aggregate(new Vector3(0,0,0), (a,b) => a+b) / (float)positions.Length;
 			Vector3[] bounds = new Vector3[] {
 				new Vector3(positions.Min(p => p.x), Mathf.Max(positions.Min(p => p.y), 0), positions.Min(p => p.z)),
 				new Vector3(positions.Max(p => p.x), positions.Max(p => p.y), positions.Max(p => p.z))
 			};
 			float distance = Vector3.Distance(bounds[0], bounds[1]);
-			Vector3 normal = Vector3.Cross(bounds[0], bounds[1]);
+			// Vector3 normal = Vector3.Cross(bounds[0], bounds[1]);
 
 			// Position and rotate the camera
 			cameraTarget.position = new Vector3(average.x, distance/1.5f + cameraDMinimum, average.z);
