@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 	public float speed    = 5;
+	public float jump     = 100;
 	public float rotation = 0.5f;
 
 	private Vector2 _rotation = new Vector2(0, 0);
@@ -14,33 +15,28 @@ public class PlayerController : MonoBehaviour {
 		_rb = GetComponent<Rigidbody>();
 	}
 
-	public void Update() {
+	public void FixedUpdate() {
 		// Rotate smoothly to the desired angle.
 		transform.rotation = Quaternion.Slerp(
 			transform.rotation,
-			Quaternion.Euler(new Vector3(0, (Mathf.PI + Mathf.Atan2(_rotation.x, _rotation.y)) * Mathf.Rad2Deg, 0)),
+			Quaternion.Euler(new Vector3(0, (Mathf.PI + Mathf.Atan2(-_rotation.x, _rotation.y)) * Mathf.Rad2Deg, 0)),
 			rotation
 		);
+
+		_rb.AddForce(Vector3.right * -_rotation.x * speed);
+		_rb.AddForce(Vector3.forward * _rotation.y * speed);
 	}
 
 	public void OnMoveHorizontal(float value) {
-		if(value != 0) {
-			_rb.AddForce(Vector3.right * -value * speed);
-			_rotation.x = -value;
-		}
+		if(value != 0) _rotation.x = value;
 	}
 
 	public void OnMoveVertical(float value) {
-		if(value != 0) {
-			_rb.AddForce(Vector3.forward * value * speed);
-			_rotation.y = value;
-		}
+		if(value != 0) _rotation.y = value;
 	}
 
 	public void OnJump(float value) {
-		if (value > 0 && _canJump > 0) {
-			_rb.AddForce(transform.up * 500);
-		}
+		if (value > 0 && _canJump > 0) _rb.AddForce(transform.up * jump);
 	}
 
 	public void OnCollisionEnter (Collision col) {

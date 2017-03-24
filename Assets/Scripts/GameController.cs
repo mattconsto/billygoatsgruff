@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void SetMessage(string message, float time) {
-		message = message;
-		time = time;
+		this.message = message;
+		this.time = time;
 	}
 }

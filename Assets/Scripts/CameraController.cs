@@ -4,7 +4,8 @@ using System.Linq;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-	public float cameraMinimum = 1;
+	public float cameraAMinimum = 1;
+	public float cameraDMinimum = 1;
 	public float cameraAngle   = 0;
 
 	private GameObject[] _players;
@@ -28,9 +29,9 @@ public class CameraController : MonoBehaviour {
 		Vector3 normal = Vector3.Cross(bounds[0], bounds[1]);
 
 		// Position and rotate the camera
-		transform.position = new Vector3(average.x, distance/1.5f + cameraMinimum, average.z);
+		transform.position = new Vector3(average.x, distance/1.5f + cameraDMinimum, average.z);
 		transform.rotation = _originalRotation;
-		transform.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance/1.5f + cameraMinimum, -80));
+		transform.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance/1.5f - cameraAMinimum, -80));
 		// transform.RotateAround(average, Vector3.up, Mathf.Rad2Deg * Mathf.Atan(normal.z/normal.x)+90); // Almost works, but it switches over.
 	}
 }

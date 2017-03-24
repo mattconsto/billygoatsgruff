@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4719646291494462}
   - component: {fileID: 33524160633408338}
   - component: {fileID: 23393877349220246}
+  - component: {fileID: 136086280013758912}
   m_Layer: 0
   m_Name: Tree_Asian_Cherry_Blossom
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272980753289786}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -53.01169, y: 0, z: -4.347168}
+  m_LocalPosition: {x: -295.50812, y: -0.1, z: -243.25876}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +74,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33524160633408338
 MeshFilter:
@@ -82,3 +82,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272980753289786}
   m_Mesh: {fileID: 4300000, guid: ca4f429bff30e114a8b497d43f14b15e, type: 3}
+--- !u!136 &136086280013758912
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272980753289786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 15
+  m_Height: 40.001663
+  m_Direction: 1
+  m_Center: {x: -3.7212112, y: 14.72, z: 4.3552847}

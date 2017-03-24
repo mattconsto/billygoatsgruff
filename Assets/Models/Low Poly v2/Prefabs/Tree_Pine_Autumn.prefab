@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4522957176876512}
   - component: {fileID: 33503241467263160}
   - component: {fileID: 23401687611739474}
-  - component: {fileID: 64321588531579466}
+  - component: {fileID: 136706810788927296}
   m_Layer: 0
   m_Name: Tree_Pine_Autumn
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1357243964254636}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.471603, y: 0, z: -2.800476}
+  m_LocalPosition: {x: -309.24716, y: -0.1, z: -224.66321}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +73,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33503241467263160
 MeshFilter:
@@ -82,8 +81,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1357243964254636}
   m_Mesh: {fileID: 4300002, guid: 62a62c03876b3e74a882ad7d90f15d0d, type: 3}
---- !u!64 &64321588531579466
-MeshCollider:
+--- !u!136 &136706810788927296
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -91,8 +90,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 62a62c03876b3e74a882ad7d90f15d0d, type: 3}
+  m_Radius: 7.411934
+  m_Height: 32.53232
+  m_Direction: 1
+  m_Center: {x: -0.12147712, y: 13.41, z: -0.05710363}

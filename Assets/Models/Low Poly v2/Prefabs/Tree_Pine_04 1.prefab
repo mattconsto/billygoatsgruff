@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4998712527986654}
   - component: {fileID: 33753952844412004}
   - component: {fileID: 23581261773838930}
-  - component: {fileID: 64686879363358266}
+  - component: {fileID: 136428637018934544}
   m_Layer: 0
   m_Name: Tree_Pine_04 1
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625007213188364}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.525314, y: 0, z: -2.3692932}
+  m_LocalPosition: {x: -313.9762, y: -0.1, z: -230.30103}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +73,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33753952844412004
 MeshFilter:
@@ -82,8 +81,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1625007213188364}
   m_Mesh: {fileID: 4300002, guid: 749f0fcee8899d14d9fc75a4b5997df6, type: 3}
---- !u!64 &64686879363358266
-MeshCollider:
+--- !u!136 &136428637018934544
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -91,8 +90,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 749f0fcee8899d14d9fc75a4b5997df6, type: 3}
+  m_Radius: 9.06
+  m_Height: 30.6
+  m_Direction: 1
+  m_Center: {x: 0.8448333, y: 10.1, z: 0.5969319}
