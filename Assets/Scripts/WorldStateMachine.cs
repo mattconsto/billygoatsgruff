@@ -18,14 +18,14 @@ public class WorldStateMachine : MonoBehaviour {
 
 	public float currentTime;
 	public float targetTime;
+	public int pointer = 0;
 
 	public WorldState[] _machine;
-	private int _pointer = -1;
 
 	private bool audioObject = true;
 
 	public void Start() {
-		Change(0);
+		Change(pointer);
 		currentTime = targetTime;
 	}
 
@@ -46,25 +46,23 @@ public class WorldStateMachine : MonoBehaviour {
 	}
 
 	public void Change(int value) {
-		if(value != _pointer) {
-			_pointer = Mathf.Clamp(value, 0, _machine.Length - 1);
-			targetTime = State().time > targetTime ? State().time : State().time + 24;
+		pointer = Mathf.Clamp(value, 0, _machine.Length - 1);
+		targetTime = State().time > targetTime ? State().time : State().time + 24;
 
-			audioObject = !audioObject;
+		audioObject = !audioObject;
 
-			if(audioObject) {
-				audioObjectA.loop = State().loop;
-				audioObjectA.clip = State().music;
-				audioObjectA.Play();
-			} else {
-				audioObjectB.loop = State().loop;
-				audioObjectB.clip = State().music;
-				audioObjectB.Play();
-			}
+		if(audioObject) {
+			audioObjectA.loop = State().loop;
+			audioObjectA.clip = State().music;
+			audioObjectA.Play();
+		} else {
+			audioObjectB.loop = State().loop;
+			audioObjectB.clip = State().music;
+			audioObjectB.Play();
 		}
 	}
 
 	public WorldState State() {
-		return _machine[_pointer];
+		return _machine[pointer];
 	}
 }

@@ -12,14 +12,11 @@ public class CameraController : MonoBehaviour {
 	public Transform cameraTarget;
 
 	private GameObject[] _players;
-	private Quaternion _originalRotation;
+	private Quaternion _originalRotation = Quaternion.Euler(90, 0, 0);
 
 	public void Start() {
 		// Store a list of players and our original rotation for later.
 		_players = GameObject.FindGameObjectsWithTag("Player");
-
-		// Camera targeting setup
-		_originalRotation = cameraTarget.rotation;
 
 		// Needs to run twice, not sure why.
 		Update(); LerpTransform(transform, cameraTarget, 1);

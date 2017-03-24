@@ -16,27 +16,21 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void FixedUpdate() {
+		_rotation = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
 		// Rotate smoothly to the desired angle.
-		transform.rotation = Quaternion.Slerp(
-			transform.rotation,
-			Quaternion.Euler(new Vector3(0, (Mathf.PI + Mathf.Atan2(-_rotation.x, _rotation.y)) * Mathf.Rad2Deg, 0)),
-			rotation
-		);
+		if(_rotation.magnitude > 0.1) {
+			transform.rotation = Quaternion.Slerp(
+				transform.rotation,
+				Quaternion.Euler(new Vector3(0, (Mathf.PI + Mathf.Atan2(_rotation.x, _rotation.y)) * Mathf.Rad2Deg, 0)),
+				rotation
+			);
+		}
 
-		_rb.AddForce(Vector3.right * -_rotation.x * speed);
+		_rb.AddForce(Vector3.right * _rotation.x * speed);
 		_rb.AddForce(Vector3.forward * _rotation.y * speed);
-	}
 
-	public void OnMoveHorizontal(float value) {
-		if(value != 0) _rotation.x = value;
-	}
-
-	public void OnMoveVertical(float value) {
-		if(value != 0) _rotation.y = value;
-	}
-
-	public void OnJump(float value) {
-		if (value > 0 && _canJump > 0) _rb.AddForce(transform.up * jump);
+		if (Input.GetAxis("Jump") > 0 && _canJump > 0) _rb.AddForce(transform.up * jump);
 	}
 
 	public void OnCollisionEnter (Collision col) {

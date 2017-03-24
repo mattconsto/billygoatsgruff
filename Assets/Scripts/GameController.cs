@@ -19,4 +19,10 @@ public class GameController : MonoBehaviour {
 		this.message = message;
 		this.time = time;
 	}
+
+	public void Begin() {
+		titleHud.SetActive(false);
+		gameHud.SetActive(true);
+		camera.GetComponent<CameraController>().cameraLocked = true;
+	}
 }

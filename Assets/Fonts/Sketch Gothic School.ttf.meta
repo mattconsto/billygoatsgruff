@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e0104d23861c8ab4b800bd0a24649291
+timeCreated: 1490381034
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Sketch Gothic School
+  fontNames:
+  - Sketch Gothic School
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
