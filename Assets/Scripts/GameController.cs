@@ -9,8 +9,7 @@ public class GameController : MonoBehaviour {
 	public GameObject titleHud;
 	public GameObject gameHud;
 
-	public GameObject titleCamera;
-	public GameObject gameCamera;
+	public GameObject camera;
 	
 	public void Update () {
 		
