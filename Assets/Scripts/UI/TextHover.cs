@@ -4,19 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
-	public Color hoverColor = Color.white;
+public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler, IDeselectHandler {
+	public  Color hoverColor = Color.white;
 	private Color _defaultColor = Color.black;
+	private Text  _textComponent;
 
 	public void Start() {
-		_defaultColor = GetComponent<Text>().color;
+		_textComponent = GetComponent<Text>();
+		_defaultColor = _textComponent.color;
 	}
 
 	public void OnPointerEnter(PointerEventData ed) {
-		GetComponent<Text>().color = hoverColor;
+		_textComponent.color = hoverColor;
+	}
+
+	public void OnSelect(BaseEventData ed) {
+		_textComponent.color = hoverColor;
 	}
 
 	public void OnPointerExit(PointerEventData ed) {
-		GetComponent<Text>().color = _defaultColor;
+		_textComponent.color = _defaultColor;
+	}
+
+	public void OnDeselect(BaseEventData ed) {
+		_textComponent.color = _defaultColor;
 	}
 }
