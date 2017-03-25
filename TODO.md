@@ -5,9 +5,6 @@ TODO
 
 * Add animations? Walking, grazing, jumping.
 * Learn from the first coursework, start needs to be a mini tutorial
-* Goat auto follow if distance large
-* Hint text AND subtitles
-* Needs to run smoothly even under WebGL!
 
 ## Level design
 
@@ -27,5 +24,7 @@ TODO
 
 * Dialogue system
 * Tweak appearance and performance
+* Goat auto follow if distance large
+* Needs to run smoothly even under WebGL!
 
 ## Innovative Game for Third Coursework

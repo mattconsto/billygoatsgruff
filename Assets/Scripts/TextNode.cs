@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TextNode : MonoBehaviour {
-	public GameObject controller;
+	public GameController controller;
 
 	public string text = "";
+	public string hint = "";
+	public AudioClip clip;
 	public float  time = 1;
 	public int    uses = -1;
 
-	private AudioSource _source;
-
-	public void Start() {
-		_source = GetComponent<AudioSource>();
-	}
-
 	public void OnTriggerEnter(Collider col) {
 		if(col.gameObject.tag == "Player" && uses != 0) {
-			controller.GetComponent<GameController>().SetMessage(text, time);
-			if(_source != null) _source.Play();
+			controller.SetMessage(text, time);
+			controller.SetHint(hint, time);
+			if(clip != null) controller.PlayNaration(clip);
 			if(uses > 0) uses--;
 		}
 	}

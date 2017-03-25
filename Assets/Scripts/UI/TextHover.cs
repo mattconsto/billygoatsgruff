@@ -16,6 +16,7 @@ public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
 	public void OnPointerEnter(PointerEventData ed) {
 		_textComponent.color = hoverColor;
+		if(GetComponent<Selectable>() != null) GetComponent<Selectable>().Select();
 	}
 
 	public void OnSelect(BaseEventData ed) {
