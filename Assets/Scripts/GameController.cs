@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour {
 	public GameObject dynamicCamera;
 	
 	private float _switchTimer = 0;
+	private float _pathfindTimer = 0;
 
 	public GameObject[] players; 
 	private int _pointer = 0;
@@ -22,19 +23,23 @@ public class GameController : MonoBehaviour {
 	private bool _canceled = false;
 
 	public void Update () {
+		_pathfindTimer -= Time.deltaTime;
 		_switchTimer -= Time.deltaTime;
 
 		if(Input.GetButton("Fire1") && _switchTimer <= 0) {
 			_switchTimer = 0.25f;
 			foreach(GameObject player in players) {
+				player.GetComponent<NavMeshAgent>().enabled = true;
 				player.GetComponent<NavMeshAgent>().Stop();
-				player.GetComponent<PlayerController>().enabled = false;
+				player.GetComponent<PlayerController>().runUpdates = false;
 			}
 			_pointer = (_pointer + 1) % players.Length;
-			players[_pointer].GetComponent<PlayerController>().enabled = true;
+			players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
+			players[_pointer].GetComponent<PlayerController>().runUpdates = true;
 		}
 
-		if(Input.GetButton("Fire3")) {
+		if(_pathfindTimer <= 0 && Input.GetButton("Fire3")) {
+			_pathfindTimer = 0.5f; // Twice a second is enough
 			for(int i = 0; i < players.Length; i++) {
 				if(i == _pointer) continue;
 

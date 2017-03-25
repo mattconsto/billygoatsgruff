@@ -22,8 +22,6 @@ TODO
 ## Scripting
 
 * Dialogue system
-* Streamlined controls
 * Tweak appearance and performance
-* Pause screen?
 
 Innovative Game for Third Coursework

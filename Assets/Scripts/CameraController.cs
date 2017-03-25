@@ -44,7 +44,7 @@ public class CameraController : MonoBehaviour {
 			// Position and rotate the camera
 			cameraTarget.position = new Vector3(average.x, average.y + distance/1.5f + cameraDMinimum, average.z);
 			cameraTarget.rotation = _originalRotation;
-			cameraTarget.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance/1.5f - cameraAMinimum, -80));
+			cameraTarget.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance/1.5f - cameraAMinimum, -70));
 		}
 
 		LerpTransform(transform, cameraTarget, 2*Time.deltaTime);

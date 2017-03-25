@@ -21,7 +21,7 @@ public class RotateTrigger : MonoBehaviour {
 
 	public void OnCollisionEnter(Collision col) {
 		// Start rotating
-		if(!moved && (objects != null || System.Array.IndexOf(objects, col.gameObject) != -1) && col.impulse.magnitude >= impulse) {
+		if(!moved && (objects == null || System.Array.IndexOf(objects, col.gameObject) != -1) && col.impulse.magnitude >= impulse) {
 			timer = time;
 			moved = true;
 		}

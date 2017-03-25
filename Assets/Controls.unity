@@ -465,7 +465,7 @@ Prefab:
     - target: {fileID: 114744602992486492, guid: 7a3f063e5bc4ee04798f01a41b000e02,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083149296471470, guid: 7a3f063e5bc4ee04798f01a41b000e02, type: 2}
       propertyPath: m_LocalRotation.x
@@ -498,6 +498,11 @@ Prefab:
     - target: {fileID: 4837082509010980, guid: 7a3f063e5bc4ee04798f01a41b000e02, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 114744602992486492, guid: 7a3f063e5bc4ee04798f01a41b000e02,
+        type: 2}
+      propertyPath: jump
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a3f063e5bc4ee04798f01a41b000e02, type: 2}
@@ -906,7 +911,7 @@ Prefab:
     - target: {fileID: 114227019400473286, guid: 9634843a53cca9f4b8227f483d9ba6df,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4250688550454088, guid: 9634843a53cca9f4b8227f483d9ba6df, type: 2}
       propertyPath: m_LocalRotation.x
@@ -939,6 +944,21 @@ Prefab:
     - target: {fileID: 4929115382331616, guid: 9634843a53cca9f4b8227f483d9ba6df, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 114227019400473286, guid: 9634843a53cca9f4b8227f483d9ba6df,
+        type: 2}
+      propertyPath: runUpdates
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114227019400473286, guid: 9634843a53cca9f4b8227f483d9ba6df,
+        type: 2}
+      propertyPath: jump
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114227019400473286, guid: 9634843a53cca9f4b8227f483d9ba6df,
+        type: 2}
+      propertyPath: speed
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9634843a53cca9f4b8227f483d9ba6df, type: 2}
@@ -1027,19 +1047,19 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419612408}
   m_Enabled: 1
-  m_Radius: 2
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
+  m_Radius: 1
+  m_Speed: 15
+  m_Acceleration: 10
+  avoidancePriority: 30
+  m_AngularSpeed: 180
+  m_StoppingDistance: 12.5
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: -1
   m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 3
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &436398202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726d5669d8ec4fc4f856d6fbb0c9c2cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects: []
+  objects:
+  - {fileID: 1659144100704792, guid: 7a3f063e5bc4ee04798f01a41b000e02, type: 2}
   impulse: 0
 --- !u!65 &463540828
 BoxCollider:
@@ -1126,7 +1147,8 @@ MonoBehaviour:
   time: 1
   timer: 0
   degrees: {x: 0, y: 0, z: 90}
-  objects: []
+  objects:
+  - {fileID: 990889197}
   impulse: 0
 --- !u!65 &492431300
 BoxCollider:
@@ -1592,19 +1614,19 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 662513554}
   m_Enabled: 1
-  m_Radius: 2
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Radius: 1
+  m_Speed: 13
+  m_Acceleration: 10
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
+  m_AngularSpeed: 180
+  m_StoppingDistance: 12.5
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: -1
   m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 3
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &664008731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1864,19 +1886,19 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 990889197}
   m_Enabled: 1
-  m_Radius: 2
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
+  m_Radius: 1
+  m_Speed: 14
+  m_Acceleration: 10
+  avoidancePriority: 40
+  m_AngularSpeed: 180
+  m_StoppingDistance: 12.5
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: -1
   m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 3
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1015168478
 GameObject:
   m_ObjectHideFlags: 0
@@ -2341,7 +2363,9 @@ MonoBehaviour:
   time: 1
   timer: 0
   degrees: {x: 0, y: 0, z: 90}
-  objects: []
+  objects:
+  - {fileID: 662513554}
+  - {fileID: 990889197}
   impulse: 0
 --- !u!4 &1244341708
 Transform:
@@ -3685,6 +3709,16 @@ Prefab:
     - target: {fileID: 4109540246028432, guid: 4d9b25115ae41cc4782e23515a829444, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 114275284598441498, guid: 4d9b25115ae41cc4782e23515a829444,
+        type: 2}
+      propertyPath: speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114275284598441498, guid: 4d9b25115ae41cc4782e23515a829444,
+        type: 2}
+      propertyPath: jump
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d9b25115ae41cc4782e23515a829444, type: 2}
