@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AI;
 
 public class GameController : MonoBehaviour {
@@ -17,6 +18,9 @@ public class GameController : MonoBehaviour {
 	public GameObject[] players; 
 	private int _pointer = 0;
 
+	private bool _started = false;
+	private bool _canceled = false;
+
 	public void Update () {
 		_switchTimer -= Time.deltaTime;
 
@@ -30,7 +34,7 @@ public class GameController : MonoBehaviour {
 			players[_pointer].GetComponent<PlayerController>().enabled = true;
 		}
 
-		if(Input.GetButton("Cancel")) {
+		if(Input.GetButton("Fire3")) {
 			for(int i = 0; i < players.Length; i++) {
 				if(i == _pointer) continue;
 
@@ -38,6 +42,19 @@ public class GameController : MonoBehaviour {
 				agent.SetDestination(players[_pointer].transform.position);
 				agent.Resume();
 			}
+		}
+
+		if(_started && Input.GetButton("Cancel")) {
+			if(!_canceled) {
+				Time.timeScale = Time.timeScale > 0 ? 0 : 1;
+				titleHud.transform.Find("Menu/Begin").GetComponent<Text>().text = "Resume";
+				titleHud.SetActive(!titleHud.activeSelf);
+				gameHud.SetActive(!gameHud.activeSelf);
+				titleHud.transform.Find("Vingette").gameObject.SetActive(!titleHud.transform.Find("Vingette").gameObject.activeSelf);
+			}
+			_canceled = true;
+		} else {
+			_canceled = false;
 		}
 	}
 
@@ -47,8 +64,11 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void Begin() {
+		_started = true;
+
 		titleHud.SetActive(false);
 		gameHud.SetActive(true);
+		titleHud.transform.Find("Vingette").gameObject.SetActive(false);
 		dynamicCamera.GetComponent<CameraController>().cameraLocked = true;
 	}
 }

@@ -14,7 +14,7 @@ TODO
 * Have mountain mesh clip through main mesh at the edges, and possibly elsewhere
 * Tree of life by the goddess
 * Break up the ground textures
-* Triggers that change global state machine => music, lighting, fog, etc.* 
+* Triggers that change global state machine => music, lighting, fog, etc.*
 * Bumpy terrain mesh, small structures
 * Snakey paths
 * Clouds?
@@ -22,10 +22,8 @@ TODO
 ## Scripting
 
 * Dialogue system
-* Puzzle prefabs
-* Cutscene camera
-* Follow button
-* Goat switching
-* Clipping
-* Menu
-* Controls screen
+* Streamlined controls
+* Tweak appearance and performance
+* Pause screen?
+
+Innovative Game for Third Coursework
