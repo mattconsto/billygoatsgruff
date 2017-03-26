@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
+	public GameController controller;
+
 	public float speed    = 5;
 	public float jump     = 100;
 	public float rotation = 0.5f;
@@ -18,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void FixedUpdate() {
-		if(runUpdates) {
+		if(runUpdates && controller.state == GameController.State.GAME) {
 			_rotation = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
 			// Rotate smoothly to the desired angle.

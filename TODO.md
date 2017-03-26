@@ -22,9 +22,7 @@ TODO
 
 ## Scripting
 
-* Dialogue system
 * Tweak appearance and performance
 * Goat auto follow if distance large
-* Needs to run smoothly even under WebGL!
 
 ## Innovative Game for Third Coursework
