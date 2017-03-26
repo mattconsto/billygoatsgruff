@@ -31,6 +31,12 @@ public class GameController : MonoBehaviour {
 	public Text messageText; 
 	public AudioSource narrationSource;
 
+	public void Start() {
+		// Just in case
+		titleHud.SetActive(true);
+		gameHud.SetActive(false);
+	}
+
 	public void Update() {
 		_pathfindTimer -= Time.deltaTime;
 		_switchTimer -= Time.deltaTime;
@@ -100,6 +106,10 @@ public class GameController : MonoBehaviour {
 		hintText.text = hint;
 		_hintTimer = time;
 		_hintVisible = true;
+	}
+
+	public void StartDialogue(Message message) {
+		
 	}
 
 	public void PlayNaration(AudioClip clip) {
