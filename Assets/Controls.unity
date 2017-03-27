@@ -2029,7 +2029,7 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.5
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
@@ -3063,9 +3063,9 @@ Terrain:
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 845d02600c679ca49bcfc864e4caf566, type: 2}
   m_TreeDistance: 500
-  m_TreeBillboardDistance: 75
+  m_TreeBillboardDistance: 95
   m_TreeCrossFadeLength: 75
-  m_TreeMaximumFullLODCount: 50
+  m_TreeMaximumFullLODCount: 100
   m_DetailObjectDistance: 150
   m_DetailObjectDensity: 0.5
   m_HeightmapPixelError: 5
@@ -3075,12 +3075,12 @@ Terrain:
   m_DrawHeightmap: 1
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
-  m_MaterialType: 3
+  m_MaterialType: 0
   m_LegacySpecular:
     serializedVersion: 2
     rgba: 4286545791
   m_LegacyShininess: 0.078125
-  m_MaterialTemplate: {fileID: 2100000, guid: dec597d08579ca741ab5e87fe1803d42, type: 2}
+  m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 0
   m_ScaleInLightmap: 0.0512
   m_LightmapParameters: {fileID: 15201, guid: 0000000000000000f000000000000000, type: 0}
