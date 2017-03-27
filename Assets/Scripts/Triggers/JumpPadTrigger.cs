@@ -5,7 +5,7 @@ using UnityEngine;
 public class JumpPadTrigger : MonoBehaviour {
 	public float force = 1;
 
-	void OnTriggerEnter(Collider col) {
+	public void OnTriggerEnter(Collider col) {
 			col.gameObject.GetComponent<Rigidbody>().AddForce(transform.up * force);
 			if(GetComponent<AudioSource>() != null) GetComponent<AudioSource>().Play();
 	}

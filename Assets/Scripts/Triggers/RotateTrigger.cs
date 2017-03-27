@@ -16,6 +16,9 @@ public class RotateTrigger : MonoBehaviour {
 		if(timer > 0) {
 			timer -= Time.deltaTime;
 			transform.Rotate(Time.deltaTime / time * degrees);
+		} else {
+			// We don't want to do unnecessary work.
+			enabled = false;
 		}
 	}
 
@@ -24,6 +27,7 @@ public class RotateTrigger : MonoBehaviour {
 		if(!moved && (objects == null || System.Array.IndexOf(objects, col.gameObject) != -1) && col.impulse.magnitude >= impulse) {
 			timer = time;
 			moved = true;
+			enabled = true;
 		}
 	}
 }

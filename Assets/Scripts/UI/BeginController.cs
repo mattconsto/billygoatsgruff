@@ -8,12 +8,10 @@ public class BeginController : MonoBehaviour, IPointerClickHandler, ISubmitHandl
 	public GameController controller;
 	public WorldStateMachine machine;
 
-	public void OnPointerClick(PointerEventData ed) {
-		controller.Begin();
-		machine.Change(0);
-	}
+	public void OnPointerClick(PointerEventData ed) {Action();}
+	public void OnSubmit(BaseEventData ed) {Action();}
 
-	public void OnSubmit(BaseEventData ed) {
+	private void Action() {
 		controller.Begin();
 		machine.Change(0);
 	}

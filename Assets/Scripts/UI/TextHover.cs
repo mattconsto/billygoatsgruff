@@ -7,16 +7,19 @@ using UnityEngine.EventSystems;
 public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler, IDeselectHandler {
 	public  Color hoverColor = Color.white;
 	private Color _defaultColor = Color.black;
-	private Text  _textComponent;
+
+	private Text _textComponent;
+	private Selectable _selectableComponent;
 
 	public void Start() {
 		_textComponent = GetComponent<Text>();
+		_selectableComponent = GetComponent<Selectable>();
 		_defaultColor = _textComponent.color;
 	}
 
 	public void OnPointerEnter(PointerEventData ed) {
 		_textComponent.color = hoverColor;
-		if(GetComponent<Selectable>() != null) GetComponent<Selectable>().Select();
+		_selectableComponent.Select();
 	}
 
 	public void OnSelect(BaseEventData ed) {

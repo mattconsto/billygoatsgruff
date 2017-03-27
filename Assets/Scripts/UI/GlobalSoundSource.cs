@@ -8,11 +8,10 @@ public class GlobalSoundSource : MonoBehaviour, IPointerClickHandler, ISubmitHan
 	public AudioClip   clip;
 	public float       volume = 1f;
 
-	public void OnPointerClick(PointerEventData ed) {
-		source.PlayOneShot(clip, volume);
-	}
+	public void OnPointerClick(PointerEventData ed) {Action();}
+	public void OnSubmit(BaseEventData ed) {Action();}
 
-	public void OnSubmit(BaseEventData ed) {
-		source.PlayOneShot(clip, volume);
+	private void Action() {
+		if(clip != null) source.PlayOneShot(clip, Mathf.Clamp(volume, 0, 1));
 	}
 }

@@ -8,25 +8,13 @@ public class ControlsController : MonoBehaviour, IPointerClickHandler, ISubmitHa
 	public GameObject target;
 	public GameObject hidden;
 
-	public void OnPointerClick(PointerEventData ed) {
+	public void OnPointerClick(PointerEventData ed) {Action();}
+	public void OnSubmit(BaseEventData ed) {Action();}
+
+	private void Action() {
+		// Toggle active, and select the first child selectable
 		target.SetActive(!target.activeSelf);
 		hidden.SetActive(!target.activeSelf);
-
-		if(target.activeSelf) {
-			target.transform.Find("Controls Image").GetComponent<Selectable>().Select();
-		} else {
-			hidden.transform.Find("Controls").GetComponent<Selectable>().Select();
-		}
-	}
-
-	public void OnSubmit(BaseEventData ed) {
-		target.SetActive(!target.activeSelf);
-		hidden.SetActive(!target.activeSelf);
-
-		if(target.activeSelf) {
-			target.transform.Find("Controls Image").GetComponent<Selectable>().Select();
-		} else {
-			hidden.transform.Find("Controls").GetComponent<Selectable>().Select();
-		}
+		(target.activeSelf ? target : hidden).GetComponentsInChildren<Selectable>()[0].Select();
 	}
 }

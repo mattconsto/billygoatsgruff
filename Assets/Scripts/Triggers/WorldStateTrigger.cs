@@ -6,7 +6,7 @@ public class WorldStateTrigger : MonoBehaviour {
 	public WorldStateMachine machine;
 	public int state = 0;
 
-	public void OnCollisionEnter(Collision col) {
+	public void OnTriggerEnter() {
 		machine.Change(state);
 	}
 }

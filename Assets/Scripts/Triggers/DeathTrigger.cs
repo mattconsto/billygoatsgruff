@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathTrigger : MonoBehaviour {
-	public void OnCollisionEnter(Collision col) {
+	public void OnTriggerEnter(Collider col) {
 		col.gameObject.SetActive(false);
 	}
 }

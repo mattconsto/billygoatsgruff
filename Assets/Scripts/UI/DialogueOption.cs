@@ -7,11 +7,10 @@ public class DialogueOption : MonoBehaviour, IPointerClickHandler, ISubmitHandle
 	public GameController controller;
 	public int option = 0;
 
-	public void OnPointerClick(PointerEventData ed) {
-		controller.DialogueOption(option);
-	}
+	public void OnPointerClick(PointerEventData ed) {Action();}
+	public void OnSubmit(BaseEventData ed) {Action();}
 
-	public void OnSubmit(BaseEventData ed) {
+	private void Action() {
 		controller.DialogueOption(option);
 	}
 }
