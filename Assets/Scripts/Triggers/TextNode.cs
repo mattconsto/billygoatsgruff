@@ -13,8 +13,8 @@ public class TextNode : MonoBehaviour {
 
 	public void OnTriggerEnter(Collider col) {
 		if(col.gameObject.tag == "Player" && uses != 0) {
-			controller.SetMessage(text, time);
-			controller.SetHint(hint, time);
+			if(text != "") controller.SetMessage(text, time);
+			if(hint != "") controller.SetHint(hint, time);
 			if(clip != null) controller.PlayNaration(clip);
 			if(uses > 0) uses--;
 		}

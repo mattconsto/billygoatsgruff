@@ -18,6 +18,7 @@ TODO
 
 ## Scripting
 
-* Add animations? Walking, grazing, jumping.
+* Animations
+* Fix unrestricted jumping
 
 ## Innovative Game for Third Coursework

@@ -10,10 +10,11 @@ public class FogController : MonoBehaviour {
 	public float lightDensity = 0.01f;
 
 	public void Start() {
+		// Makes editing easier
 		RenderSettings.fog = true;
 	}
 
-	public void Update() {
+	public void FixedUpdate() {
 		float position = Mathf.Clamp(transform.position.y/100f, 0, 1);
 		RenderSettings.fogColor = Color.Lerp(darkColor, lightColor, position);
 		RenderSettings.fogDensity = Mathf.Lerp(darkDensity, lightDensity, position);

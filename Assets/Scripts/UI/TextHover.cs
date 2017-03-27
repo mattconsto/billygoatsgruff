@@ -22,12 +22,12 @@ public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 		_selectableComponent.Select();
 	}
 
-	public void OnSelect(BaseEventData ed) {
-		_textComponent.color = hoverColor;
-	}
-
 	public void OnPointerExit(PointerEventData ed) {
 		_textComponent.color = _defaultColor;
+	}
+
+	public void OnSelect(BaseEventData ed) {
+		_textComponent.color = hoverColor;
 	}
 
 	public void OnDeselect(BaseEventData ed) {

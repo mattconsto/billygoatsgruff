@@ -12,9 +12,12 @@ public class ControlsController : MonoBehaviour, IPointerClickHandler, ISubmitHa
 	public void OnSubmit(BaseEventData ed) {Action();}
 
 	private void Action() {
-		// Toggle active, and select the first child selectable
+		// Toggle active, and select the first child selected.
 		target.SetActive(!target.activeSelf);
 		hidden.SetActive(!target.activeSelf);
+		
+		EventSystem.current.SetSelectedGameObject(null);
+		foreach(TextHover sel in GetComponentsInChildren<TextHover>()) sel.OnDeselect(null);
 		(target.activeSelf ? target : hidden).GetComponentsInChildren<Selectable>()[0].Select();
 	}
 }

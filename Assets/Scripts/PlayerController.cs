@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour {
 	public float jump     = 100;
 	public float rotation = 0.5f;
 
-	public bool runUpdates = true;
-
 	private Vector2 _rotation = new Vector2(0, 0);
 	public int _canJump = 0;
 	private Rigidbody _rb;
@@ -20,7 +18,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void FixedUpdate() {
-		if(runUpdates && controller.state == GameController.State.GAME) {
+		if(controller.state == GameController.State.GAME) {
 			_rotation = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
 			// Rotate smoothly to the desired angle.
