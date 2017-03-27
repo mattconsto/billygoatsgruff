@@ -29,9 +29,12 @@ Third Party Notices
 * [axe_miss by smokebomb99 (CC0 1.0)](https://freesound.org/people/smokebomb99/sounds/147290)
 * [boing by plingativator (CC BY 3.0)](https://freesound.org/people/plingativator/sounds/188869)
 * [click by Christopherderp (CC0 1.0)](https://freesound.org/people/Christopherderp/sounds/342200)
+* [creak by Robinhood76 (CC BY NC 3.0)](https://freesound.org/people/Robinhood76/sounds/100392/)
 * [electricty by PureAudioNinja (CC0 1.0)](https://freesound.org/people/PureAudioNinja/sounds/341612)
 * [flare_bang by j1987 (CC0 1.0)](https://freesound.org/people/j1987/sounds/140726)
 * [flare_whistle by j1987 (CC0 1.0)](https://freesound.org/people/j1987/sounds/140726)
+* [gust by crashoverride61088 (CC0 1.0)](https://freesound.org/people/crashoverride61088/sounds/146932/)
+* [heavy_gate by Omnisis (CC0 1.0)](https://freesound.org/people/Omnisis/sounds/336888/)
 * [hitsound_ding by JohnsonBrandEditing (CC0 1.0)](https://freesound.org/people/JohnsonBrandEditing/sounds/173932)
 * [hitsound_pop by SmartWentCody (CC BY 3.0)](https://freesound.org/people/SmartWentCody/sounds/179014)
 * [jump by kfatehi (CC0 1.0)](https://freesound.org/people/kfatehi/sounds/363921)
@@ -42,6 +45,9 @@ Third Party Notices
 * [step by movingplaid (CC BY 3.0)](https://freesound.org/people/movingplaid/sounds/76190/)
 * [thud by Bird_man (CC0 1.0)](https://freesound.org/people/Bird_man/sounds/275160)
 * [water by Mafon2 (CC0 1.0)](https://freesound.org/people/Mafon2/sounds/371274)
+* [waterfall by craftport (CC BY 3.0)](https://freesound.org/people/craftport/sounds/248104/)
+* [wind by Akacie (CC0 1.0)](https://freesound.org/people/Akacie/sounds/73723/)
+* [wooden_destruction by InspectorJ (CC BY 3.0)](https://freesound.org/people/InspectorJ/sounds/352513/)
 
 ## Licenses
 
