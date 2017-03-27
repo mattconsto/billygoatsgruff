@@ -33,13 +33,10 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			// Minimise strafing
-			_rb.AddForce(Vector3.right * _rotation.x * speed * (_canJump > 0 ? 1f : 0.5f));
-			_rb.AddForce(Vector3.forward * _rotation.y * speed * (_canJump > 0 ? 1f : 0.5f));
+			_rb.MovePosition(_rb.position + Vector3.right * _rotation.x * speed * (_canJump > 0 ? 1f : 0.5f) * Time.deltaTime);
+			_rb.MovePosition(_rb.position + Vector3.forward * _rotation.y * speed * (_canJump > 0 ? 1f : 0.5f) * Time.deltaTime);
 
-			if(Input.GetButton("Jump") && _canJump > 0) {
-				_rb.AddForce(transform.up * jump);
-				_rb.AddForce(transform.forward * jump);
-			}
+			if(Input.GetButton("Jump") && _canJump > 0) _rb.AddForce(transform.up * jump);
 		}
 	}
 

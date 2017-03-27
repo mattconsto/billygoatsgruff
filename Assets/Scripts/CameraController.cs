@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
-	public float cameraAMinimum = 1;
 	public float cameraDMinimum = 1;
 	public float cameraAngle   = 0;
 
@@ -44,7 +43,7 @@ public class CameraController : MonoBehaviour {
 			// Position and rotate the camera
 			cameraTarget.position = new Vector3(average.x, average.y + distance/1.5f + cameraDMinimum, average.z);
 			cameraTarget.rotation = _originalRotation;
-			cameraTarget.RotateAround(average, Vector3.right, Mathf.Max(cameraAngle - distance/1.5f - cameraAMinimum, -70));
+			cameraTarget.RotateAround(average, Vector3.right, cameraAngle);
 		}
 
 		LerpTransform(transform, cameraTarget, 2*Time.deltaTime);

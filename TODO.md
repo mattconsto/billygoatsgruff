@@ -22,7 +22,6 @@ TODO
 
 ## Scripting
 
-* Tweak appearance and performance
 * Goat auto follow if distance large
 
 ## Innovative Game for Third Coursework
