@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
@@ -40,10 +41,14 @@ public class GameController : MonoBehaviour {
 	public RawImage vingette;
 	private float _vingetteTarget = 0;
 
+	private bool[] _autofollow;
+
 	public void Start() {
 		// Just in case
 		titleHud.SetActive(true);
 		gameHud.SetActive(false);
+
+		_autofollow = new bool[players.Length];
 	}
 
 	public void Update() {
@@ -91,6 +96,7 @@ public class GameController : MonoBehaviour {
 			_pathfindTimer = 0.5f; // Twice a second is enough
 			for(int i = 0; i < players.Length; i++) {
 				if(i == _pointer) continue;
+				_autofollow[i] = true;
 
 				NavMeshAgent agent = players[i].GetComponent<NavMeshAgent>();
 				agent.SetDestination(players[_pointer].transform.position);
@@ -112,6 +118,29 @@ public class GameController : MonoBehaviour {
 			_canceled = true;
 		} else {
 			_canceled = false;
+		}
+
+		// Autofollow
+		if(state == State.GAME && _pathfindTimer <= 0) {
+			for(int i = 0; i < players.Length; i++) {
+				if(i == _pointer) continue;
+
+				float distance = Vector3.Distance(players[_pointer].transform.position, players[i].transform.position);
+
+				if(distance > 75 && !_autofollow[i]) {
+					_pathfindTimer = 0.5f; // Twice a second is enough
+					_autofollow[i] = true;
+
+					NavMeshAgent agent = players[i].GetComponent<NavMeshAgent>();
+					agent.SetDestination(players[_pointer].transform.position);
+					agent.Resume();
+				}
+
+				if(distance < 75 && _autofollow[i]) {
+					_autofollow[i] = false;
+					players[i].GetComponent<NavMeshAgent>().Stop();
+				}
+			}
 		}
 	}
 

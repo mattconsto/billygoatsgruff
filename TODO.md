@@ -1,13 +1,9 @@
 TODO
 ====
 
-## General
-
-* Add animations? Walking, grazing, jumping.
-* Learn from the first coursework, start needs to be a mini tutorial
-
 ## Level design
 
+* Learn from the first coursework, start needs to be a mini tutorial
 * Possible add ford once you talk to the goddess
 * Tunnel underground for little billy goat
 * Farm is surrounded by trees with fencing
@@ -22,6 +18,6 @@ TODO
 
 ## Scripting
 
-* Goat auto follow if distance large
+* Add animations? Walking, grazing, jumping.
 
 ## Innovative Game for Third Coursework
