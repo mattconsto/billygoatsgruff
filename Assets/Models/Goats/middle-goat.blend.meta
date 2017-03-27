@@ -39,6 +39,7 @@ ModelImporter:
     7400016: Walk
     7400018: Yes
     9500000: //RootNode
+    11100000: //RootNode
     13700000: Model
   materials:
     importMaterials: 1
@@ -60,7 +61,507 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: Attack
+      firstFrame: -1
+      lastFrame: 83
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Combined
+      takeName: Combined
+      firstFrame: 0
+      lastFrame: 510
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Eat
+      takeName: Eat
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: No
+      takeName: No
+      firstFrame: -1
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Rise
+      takeName: Rise
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sit
+      takeName: Sit
+      firstFrame: -1
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Waggle
+      takeName: Waggle
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Yes
+      takeName: Yes
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Goat
+        weight: 1
+      - path: Goat/Master
+        weight: 1
+      - path: Goat/Master/F_L_Leg
+        weight: 1
+      - path: Goat/Master/F_R_Leg
+        weight: 1
+      - path: Goat/Master/Neck
+        weight: 1
+      - path: Goat/Master/Neck/Head
+        weight: 1
+      - path: Goat/Master/R_L_Leg
+        weight: 1
+      - path: Goat/Master/R_R_Leg
+        weight: 1
+      - path: Goat/Master/Tail
+        weight: 1
+      - path: Model
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -99,10 +600,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -49,6 +49,17 @@ public class GameController : MonoBehaviour {
 		gameHud.SetActive(false);
 
 		_autofollow = new bool[players.Length];
+
+		_switchTimer = 0.25f;
+		foreach(GameObject player in players) {
+			// if(player.activeSelf) {
+				player.GetComponent<NavMeshAgent>().enabled = true;
+				player.GetComponent<NavMeshAgent>().Stop();
+				player.GetComponent<PlayerController>().enabled = false;
+			// }
+		}
+		players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
+		players[_pointer].GetComponent<PlayerController>().enabled = true;
 	}
 
 	public void Update() {

@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour {
 
 	public void Start () {
 		_rb = GetComponent<Rigidbody>();
-		// GetComponent<Animation>().Play("ArmatureAction_001");
 	}
 
 	public void FixedUpdate() {
