@@ -5,6 +5,12 @@ Third Party Notices
 
 * [Common Controller by Rahazan (CC BY 3.0)](http://opengameart.org/content/common-controller)
 * [Keyboard Keys by TRBRY (CC BY 3.0)](http://opengameart.org/content/keyboard-keys)
+* [Game Wood panel by PINKCANNON (CC BY 3.0)](http://opengameart.org/content/game-wood-panel)
+
+## Fonts
+
+* [Permanent Marker by Font Diner (Apache 2.0)](https://fonts.google.com/specimen/Permanent+Marker)
+* [Sketch Gothic School (Non-Commercial, See PDF)](http://www.dafont.com/sketch-gothic-school.font)
 
 ## Models
 
@@ -51,6 +57,7 @@ Third Party Notices
 
 ## Licenses
 
+* [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 * [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0)
 * [CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
 * [CC BY NC 3.0](https://creativecommons.org/licenses/by-nc/3.0)
