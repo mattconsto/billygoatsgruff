@@ -1,84 +1,45 @@
 fileFormatVersion: 2
-guid: 609cfcaa07b40a24686a68af643b943f
-timeCreated: 1489681226
+guid: f62467e4cf46549468070ca86b639add
+timeCreated: 1490647914
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Armature
-    100002: Armature_001
-    100004: Armature_002
-    100006: Cube
-    100008: Cube_001
-    100010: Cube_002
-    100012: F_L_Leg
-    100014: F_L_Leg_0
-    100016: F_L_Leg_1
-    100018: F_R_Leg
-    100020: F_R_Leg_0
-    100022: F_R_Leg_1
-    100024: //RootNode
-    100026: Head
-    100028: Head_0
-    100030: Head_1
-    100032: Master
-    100034: Master_0
-    100036: Master_1
-    100038: Neck
-    100040: Neck_0
-    100042: Neck_1
-    100044: R_L_Leg
-    100046: R_L_Leg_0
-    100048: R_L_Leg_1
-    100050: R_R_Leg
-    100052: R_R_Leg_0
-    100054: R_R_Leg_1
-    100056: Tail
-    100058: Tail_0
-    100060: Tail_1
-    400000: Armature
-    400002: Armature_001
-    400004: Armature_002
-    400006: Cube
-    400008: Cube_001
-    400010: Cube_002
-    400012: F_L_Leg
-    400014: F_L_Leg_0
-    400016: F_L_Leg_1
-    400018: F_R_Leg
-    400020: F_R_Leg_0
-    400022: F_R_Leg_1
-    400024: //RootNode
-    400026: Head
-    400028: Head_0
-    400030: Head_1
-    400032: Master
-    400034: Master_0
-    400036: Master_1
-    400038: Neck
-    400040: Neck_0
-    400042: Neck_1
-    400044: R_L_Leg
-    400046: R_L_Leg_0
-    400048: R_L_Leg_1
-    400050: R_R_Leg
-    400052: R_R_Leg_0
-    400054: R_R_Leg_1
-    400056: Tail
-    400058: Tail_0
-    400060: Tail_1
-    4300000: Cube
-    4300002: Cube_001
-    4300004: Cube_002
+    100000: F_L_Leg
+    100002: F_R_Leg
+    100004: Goat
+    100006: Head
+    100008: Master
+    100010: //RootNode
+    100012: Model
+    100014: Neck
+    100016: R_L_Leg
+    100018: R_R_Leg
+    100020: Tail
+    400000: F_L_Leg
+    400002: F_R_Leg
+    400004: Goat
+    400006: Head
+    400008: Master
+    400010: //RootNode
+    400012: Model
+    400014: Neck
+    400016: R_L_Leg
+    400018: R_R_Leg
+    400020: Tail
+    4300000: Model
     7400000: Default Take
-    7400002: ArmatureAction
-    7400004: ArmatureAction_001
-    7400006: ArmatureAction_002
-    7400008: Combined
+    7400002: Attack
+    7400004: Combined
+    7400006: Eat
+    7400008: No
+    7400010: Rise
+    7400012: Sit
+    7400014: Waggle
+    7400016: Walk
+    7400018: Yes
     9500000: //RootNode
-    13700000: Cube
-    13700002: Cube_001
-    13700004: Cube_002
+    13700000: Model
   materials:
     importMaterials: 1
     materialName: 0
