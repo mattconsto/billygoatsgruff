@@ -136,6 +136,7 @@ public class GameController : MonoBehaviour {
 				titleHud.SetActive(!titleHud.activeSelf);
 				gameHud.SetActive(!gameHud.activeSelf);
 				_vingetteTarget = gameHud.activeSelf ? 0 : 1;
+				Cursor.visible = !Cursor.visible;
 				// state = State.PAUSE;
 			} else {
 				// state = State.GAME;
@@ -206,6 +207,8 @@ public class GameController : MonoBehaviour {
 			dynamicCamera.GetComponent<CameraController>().cameraLocked = true;
 			_dialogueTimed = false;
 			state = State.GAME;
+
+			Cursor.visible = false;
 		} else {
 			_dialogueTimer = this.dialogue.clip == null ? 5 : this.dialogue.clip.length*2;
 			_dialogueTimed = true;
@@ -214,7 +217,8 @@ public class GameController : MonoBehaviour {
 
 			switch(this.dialogue.action) {
 				case MessageAction.NONE:
-				gameHud.transform.Find("Panel").gameObject.SetActive(false);
+					gameHud.transform.Find("Panel").gameObject.SetActive(false);
+					Cursor.visible = false;
 				break;
 				case MessageAction.CHOICE:
 					_dialogueTimer = Mathf.Infinity;
@@ -222,13 +226,16 @@ public class GameController : MonoBehaviour {
 					gameHud.transform.Find("Panel").gameObject.SetActive(true);
 					gameHud.transform.Find("Panel/Option 1").GetComponent<Text>().text = this.dialogue.children[0].text;
 					gameHud.transform.Find("Panel/Option 2").GetComponent<Text>().text = this.dialogue.children[1].text;
+					Cursor.visible = true;
 					break;
 				case MessageAction.END:
 					gameHud.transform.Find("Panel").gameObject.SetActive(false);
+					Cursor.visible = false;
 					break;
 				case MessageAction.KILL:
 					gameHud.transform.Find("Panel").gameObject.SetActive(false);
 					players[_pointer].SetActive(false);
+					Cursor.visible = false;
 					break;
 			}
 		}
@@ -245,6 +252,8 @@ public class GameController : MonoBehaviour {
 	public void Begin() {
 		state = State.GAME;
 
+		Cursor.lockState = CursorLockMode.Confined;
+		Cursor.visible = false;
 		titleHud.SetActive(false);
 		gameHud.SetActive(true);
 		_vingetteTarget = 0;
