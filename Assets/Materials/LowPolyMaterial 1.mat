@@ -33,7 +33,7 @@ Material:
       second: 0
     - first:
         name: _Shininess
-      second: 100
+      second: 10000
     m_Colors:
     - first:
         name: <noninit>

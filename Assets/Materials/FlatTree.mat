@@ -10,7 +10,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 1486fdc75b1c646488aa3cbe50a0856e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -48,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e6bea0b29167ee149b8e9ad3019c57b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -78,7 +78,7 @@ Material:
       second: 1
     - first:
         name: _CollisionWaveLength
-      second: 2
+      second: 0
     - first:
         name: _Cutoff
       second: 0.5
@@ -105,13 +105,13 @@ Material:
       second: 0.02
     - first:
         name: _RandomHeight
-      second: 0
+      second: 1
     - first:
         name: _RandomSpeed
-      second: 0.5
+      second: 1
     - first:
         name: _Shininess
-      second: 10
+      second: 0
     - first:
         name: _SrcBlend
       second: 1
@@ -120,10 +120,10 @@ Material:
       second: 0
     - first:
         name: _WaveHeight
-      second: 0
+      second: 0.5
     - first:
         name: _WaveLength
-      second: 1
+      second: 2
     - first:
         name: _WaveSpeed
       second: 1
@@ -133,10 +133,10 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.18166089, g: 0.44117647, b: 0.28009784, a: 1}
+      second: {r: 0.12975778, g: 0.2669133, b: 0.29411763, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _SpecColor
-      second: {r: 0.116200365, g: 0.1544118, b: 0.08515356, a: 1}
+      second: {r: 0.18339099, g: 0.2352941, b: 0.2331464, a: 1}
