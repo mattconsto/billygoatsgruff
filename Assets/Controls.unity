@@ -553,7 +553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc10e926e1f25514bb2fdaffa9ee899a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.13
+      value: 41.06
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc10e926e1f25514bb2fdaffa9ee899a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -672,7 +672,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 125080825}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -848, y: 45.13, z: 32}
+  m_LocalPosition: {x: -848, y: 44.37, z: 32}
   m_LocalScale: {x: 1, y: 6.575005, z: 1}
   m_Children: []
   m_Father: {fileID: 436398203}
@@ -715,7 +715,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131073875}
   m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 4.07}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1244341708}
@@ -4568,7 +4568,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6f5ac22b894785345bc0de34be8399eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.13
+      value: 40.78
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6f5ac22b894785345bc0de34be8399eb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4865,7 +4865,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a02222d69f5a2cd42b19f38cba29bf3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.13
+      value: 40.74
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a02222d69f5a2cd42b19f38cba29bf3e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5122,7 +5122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.4
+      value: 42.08
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5454,7 +5454,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 845d02600c679ca49bcfc864e4caf566, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 1000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -5617,7 +5617,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f28eac8bc1e4833449e1712dc323ef98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.13
+      value: 40.68
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f28eac8bc1e4833449e1712dc323ef98, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5892,7 +5892,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: f62aa0b69c310f1419e388b6836bad5a, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 200
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -6185,8 +6185,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkColor: {r: 0.014705896, g: 0.014705896, b: 0.014705896, a: 1}
   lightColor: {r: 0.97794116, g: 0.97794116, b: 0.97794116, a: 1}
-  darkDensity: 0.02
-  lightDensity: 0.01
+  darkDensity: 0.01
+  lightDensity: 0.005
 --- !u!1 &664397942
 GameObject:
   m_ObjectHideFlags: 0
@@ -11238,13 +11238,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1068433175}
-  m_LocalRotation: {x: 0.112384364, y: 0.5241731, z: -0.0047944197, w: 0.84415007}
-  m_LocalPosition: {x: -254, y: 25.4, z: 88.5}
+  m_LocalRotation: {x: -0, y: 0.115336776, z: -0, w: 0.9933264}
+  m_LocalPosition: {x: -254, y: 24.6, z: 88.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 11.231001, y: 64.30801, z: 6.4230003}
+  m_LocalEulerAnglesHint: {x: 0, y: 13.246, z: 0}
 --- !u!114 &1068433181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11256,7 +11256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1348ee15057fbfa46910e623046d6f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDMinimum: 25
+  cameraDMinimum: 20
   cameraAngle: -65
   cameraLocked: 0
   cameraTarget: {fileID: 569514784}
@@ -11692,7 +11692,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 648378d3bf7462440a3e462942e59408, type: 2}
-  m_TreeDistance: 2000
+  m_TreeDistance: 200
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -12370,7 +12370,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.4
+      value: 41.53
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12552,15 +12552,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 522.2
+      value: 522.7
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.6688
+      value: 15.7
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -133.85013
+      value: -68.5
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalRotation.x
@@ -12911,7 +12911,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1450794396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -848, y: 45.13, z: 25}
+  m_LocalPosition: {x: -848, y: 42.34, z: 25}
   m_LocalScale: {x: 1, y: 1, z: 4.8174653}
   m_Children: []
   m_Father: {fileID: 436398203}
@@ -12977,7 +12977,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5dc0aab3aa1f6574fa89d0a18579f53a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.13
+      value: 41.93
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5dc0aab3aa1f6574fa89d0a18579f53a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14319,7 +14319,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.4
+      value: 42.08
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.z
