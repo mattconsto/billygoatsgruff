@@ -1,9 +1,6 @@
 Music:
 ======
 
-## THEME
-Sleep and Then
-
 ## CALL
 Open Those Bright Eyes
 
