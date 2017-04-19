@@ -162,7 +162,7 @@ public class GameController : MonoBehaviour {
 					agent.Resume();
 				}
 
-				if(distance < 75 && _autofollow[i]) {
+				if(distance < 50 && _autofollow[i]) {
 					_autofollow[i] = false;
 					players[i].GetComponent<NavMeshAgent>().Stop();
 				}
