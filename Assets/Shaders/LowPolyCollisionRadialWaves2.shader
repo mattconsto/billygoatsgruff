@@ -1,13 +1,5 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
-// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
-
-
-Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0" 
-{
-	Properties
-	{
+Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0" {
+	Properties {
 		_MainTex("Diffuse (RGB)", 2D) = "white" {}
 		_Color("Color", Color) = (1,0,0,1)
 		_SpecColor("Specular Material Color", Color) = (1,1,1,1)
@@ -26,17 +18,16 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 		#define UNITY_SETUP_BRDF_INPUT SpecularSetup
 	ENDCG
 
-	SubShader
-	{
-		Tags { "Queue" = "Geometry" "RenderType" = "Opaque" } //"Geometry" "RenderType" = "Opaque" } 
+	SubShader {
+		Tags {"Queue" = "Geometry" "RenderType" = "Opaque"}
 		Blend SrcAlpha OneMinusSrcAlpha
+		Fog {Mode Off}
 
-		Pass
-		{
-			Tags{ "LightMode" = "ForwardBase" }
+		Pass {
+			Tags {"LightMode" = "ForwardBase"}
 
 			CGPROGRAM
-				#pragma target 3.0
+				#pragma target 5.0
 				#pragma exclude_renderers gles
 				#pragma vertex vert
 				#pragma geometry geom
@@ -49,13 +40,11 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 				#include "HLSLSupport.cginc"
 				#include "UnityStandardCore.cginc"
 
-				float rand(float3 co)
-				{
+				float rand(float3 co) {
 					return frac(sin(dot(co.xyz ,float3(12.9898,78.233,45.5432))) * 43758.5453);
 				}
 
-				float rand2(float3 co)
-				{
+				float rand2(float3 co) {
 					return frac(sin(dot(co.xyz ,float3(19.9128,75.2,34.5122))) * 12765.5213);
 				}
 
@@ -72,22 +61,20 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 
 				sampler2D _CameraDepthTexture; 
 
-				struct vFwdBase
-				{
+				struct vFwdBase {
 					float4 pos                     : SV_POSITION;
 					float4 tex                     : TEXCOORD0;
 					half3 eyeVec                   : TEXCOORD1;
 					half4 tangentToWorldAndParallax[3]   : TEXCOORD2;   // [3x3:tangentToWorld | 1x3:viewDirForParallax]
 					half4 ambientOrLightmapUV         : TEXCOORD5;   // SH or Lightmap UV
 					SHADOW_COORDS(6)
-					UNITY_FOG_COORDS(7)
-					float4 posWorld                  : TEXCOORD8;
-					float3 diffuseColor : TEXCOORD9;
-					float3 specularColor : TEXCOORD10;
+					float4 posWorld                  : TEXCOORD7;
+					float3 diffuseColor : TEXCOORD8;
+					float3 specularColor : TEXCOORD9;
+					half fogDepth: TEXCOORD10;
 				};
 
-				vFwdBase vert(VertexInput v)
-				{
+				vFwdBase vert(VertexInput v) {
 					vFwdBase o;
 					UNITY_INITIALIZE_OUTPUT(vFwdBase, o);
 
@@ -95,14 +82,12 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 
 					float collPhase = 0.0;
 
-					for (int i = 0; i < 20; i++)
-					{
+					for (int i = 0; i < 20; i++) {
 						float distanceToCenter = length(v0.xz - _CollisionVectors[i].xy);
 						float waveHeight = _CollisionVectors[i].z;
 						float waveState = _CollisionVectors[i].w;
 
-						if (distanceToCenter < _CollisionWaveLength * 10 * waveState)
-						{
+						if (distanceToCenter < _CollisionWaveLength * 10 * waveState) {
 							collPhase += (waveHeight * ((1.0 - waveState) * distanceToCenter) / (_CollisionWaveLength * 10 * waveState)) * sin(distanceToCenter - (_CollisionWaveLength * 10 * waveState));
 						}
 					}
@@ -173,15 +158,25 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 						o.tangentToWorldAndParallax[2].w = viewDirForParallax.z;
 					#endif
 
-					UNITY_TRANSFER_FOG(o, o.pos);
 					o.diffuseColor = float3(0.0, 0.0, 0.0);
 					o.specularColor = float3(0.0, 0.0, 0.0);
+
+					o.fogDepth = length(UnityObjectToViewPos(v.vertex));
+					#if defined(FOG_LINEAR)
+						o.fogDepth = o.fogDepth * unity_FogParams.z + unity_FogParams.w;
+					#elif defined(FOG_EXP)
+						o.fogDepth = exp2(-(o.fogDepth * unity_FogParams.y));
+					#elif defined(FOG_EXP2)
+						o.fogDepth = exp2(-(o.fogDepth * unity_FogParams.y)*(o.fogDepth * unity_FogParams.y));
+					#else
+						o.fogDepth = 0.0;
+					#endif
+
 					return o;
 				}
 
 				[maxvertexcount(3)]
-				void geom(triangle vFwdBase IN[3], inout TriangleStream<vFwdBase> triStream)
-				{
+				void geom(triangle vFwdBase IN[3], inout TriangleStream<vFwdBase> triStream) {
 					vFwdBase o;
 					UNITY_INITIALIZE_OUTPUT(vFwdBase, o);
 
@@ -211,12 +206,9 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 						* max(0.0, dot(normalDirection, lightDirection));
 
 					float3 specularReflection;
-					if (dot(normalDirection, lightDirection) < 0.0)
-					{
+					if (dot(normalDirection, lightDirection) < 0.0) {
 						specularReflection = float3(0.0, 0.0, 0.0);
-					}
-					else
-					{
+					} else {
 						specularReflection = attenuation * _LightColor0.rgb
 							* _SpecColor.rgb * pow(max(0.0, dot(
 								reflect(-lightDirection, normalDirection),
@@ -230,9 +222,9 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 					o.tangentToWorldAndParallax = IN[0].tangentToWorldAndParallax;
 					o.ambientOrLightmapUV = IN[0].ambientOrLightmapUV;
 					TRANSFER_SHADOW(o);
-					UNITY_TRANSFER_FOG(o, o.pos);
 					o.diffuseColor = ambientLighting + diffuseReflection / 4;
 					o.specularColor = specularReflection + diffuseReflection * 3 / 4;
+					o.fogDepth = IN[0].fogDepth;
 					triStream.Append(o);
 
 					o.pos = IN[1].pos;
@@ -242,9 +234,9 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 					o.tangentToWorldAndParallax = IN[1].tangentToWorldAndParallax;
 					o.ambientOrLightmapUV = IN[1].ambientOrLightmapUV;
 					TRANSFER_SHADOW(o);
-					UNITY_TRANSFER_FOG(o, o.pos);
 					o.diffuseColor = ambientLighting + diffuseReflection / 4;
 					o.specularColor = specularReflection + diffuseReflection * 3 / 4;
+					o.fogDepth = IN[1].fogDepth;
 					triStream.Append(o);
 
 					o.pos = IN[2].pos;
@@ -254,35 +246,34 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 					o.tangentToWorldAndParallax = IN[2].tangentToWorldAndParallax;
 					o.ambientOrLightmapUV = IN[2].ambientOrLightmapUV;
 					TRANSFER_SHADOW(o);
-					UNITY_TRANSFER_FOG(o, o.pos);
 					o.diffuseColor = ambientLighting + diffuseReflection / 4;
 					o.specularColor = specularReflection + diffuseReflection * 3 / 4;
+					o.fogDepth = IN[2].fogDepth;
 					triStream.Append(o);
 
 				}
 
-				half4 frag(vFwdBase IN) : COLOR
-				{
+				half4 frag(vFwdBase IN) : COLOR {
 					float z1 = tex2Dproj(_CameraDepthTexture, IN.pos); 
 					z1 = LinearEyeDepth(z1);
 					float z2 = (IN.pos.z);
 					z1 = saturate(0.125 * (abs(z2 - z1)));
 					half shadowAtten = SHADOW_ATTENUATION(IN);
 
-					return float4((IN.specularColor * shadowAtten) +
+					float4 colorTex = float4((IN.specularColor * shadowAtten) +
 					IN.diffuseColor , saturate(z1*0.1) + _AlphaFactor);
+					return lerp(unity_FogColor, colorTex, IN.fogDepth);
 				}
 			ENDCG
 		}
 
-		Pass
-		{
-            Name "ShadowCaster"
-			Tags{ "LightMode" = "ShadowCaster" }
+		Pass {
+			Name "ShadowCaster"
+			Tags {"LightMode" = "ShadowCaster"}
 
-			Fog{ Mode Off }
+			Fog {Mode Off}
 			ZWrite On ZTest Less Cull Off
-            Offset [_ShadowBias],[_ShadowBiasSlope]
+			Offset [_ShadowBias],[_ShadowBiasSlope]
 
 			CGPROGRAM
 				#pragma vertex vert
@@ -291,13 +282,11 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 				#pragma fragmentoption ARB_precision_hint_fastest
 				#include "UnityCG.cginc"
 
-				float rand(float3 co)
-				{
+				float rand(float3 co) {
 					return frac(sin(dot(co.xyz ,float3(12.9898,78.233,45.5432))) * 43758.5453);
 				}
 
-				float rand2(float3 co)
-				{
+				float rand2(float3 co) {
 					return frac(sin(dot(co.xyz ,float3(19.9128,75.2,34.5122))) * 12765.5213);
 				}
 
@@ -309,25 +298,21 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 				float _CollisionWaveLength;
 				vector _CollisionVectors[20];
 
-				struct v2f
-				{
+				struct v2f {
 					V2F_SHADOW_CASTER;
 				};
 				
-				v2f vert(appdata_base v)
-				{
+				v2f vert(appdata_base v) {
 					float3 v0 = mul((float3x3)unity_ObjectToWorld, v.vertex).xyz;
 
 					float collPhase = 0.0;
 
-					for (int i = 0; i < 20; i++)
-					{
+					for (int i = 0; i < 20; i++) {
 						float distanceToCenter = length(v0.xz - _CollisionVectors[i].xy);
 						float waveHeight = _CollisionVectors[i].z;
 						float waveState = _CollisionVectors[i].w;
 
-						if (distanceToCenter < _CollisionWaveLength * 10 * waveState)
-						{
+						if (distanceToCenter < _CollisionWaveLength * 10 * waveState) {
 							collPhase += (waveHeight * ((1.0 - waveState) * distanceToCenter) / (_CollisionWaveLength * 10 * waveState)) * sin(distanceToCenter - (_CollisionWaveLength * 10 * waveState));
 						}
 					}
@@ -345,12 +330,12 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0"
 					return o;
 				}
 				
-				float4 frag(v2f i) : COLOR
-				{
+				float4 frag(v2f i) : COLOR {
 					SHADOW_CASTER_FRAGMENT(i)
 				}
 			ENDCG
 		}
 	}
+
 	Fallback "Diffuse"
 }
