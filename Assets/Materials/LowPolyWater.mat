@@ -11,7 +11,7 @@ Material:
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -67,12 +67,12 @@ Material:
     - _Parallax: 0.02
     - _RandomHeight: 0.2
     - _RandomSpeed: 2
-    - _Shininess: 31.06
+    - _Shininess: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WaveHeight: 0.2
+    - _WaveHeight: 1
     - _WaveLength: 3
-    - _WaveSpeed: 1
+    - _WaveSpeed: 2
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.10034603, g: 0.43994746, b: 0.4705882, a: 1}
