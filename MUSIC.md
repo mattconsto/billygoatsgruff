@@ -4,9 +4,6 @@ Music:
 ## CALL
 Open Those Bright Eyes
 
-## REFUSAL
-Sleep and Then
-
 ## THRESHOLD
 Discovery Hit
 
