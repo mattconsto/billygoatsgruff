@@ -6408,6 +6408,7 @@ Transform:
   - {fileID: 1670268999}
   - {fileID: 1228279035}
   - {fileID: 1101748963}
+  - {fileID: 878070680}
   m_Father: {fileID: 436398203}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11389,6 +11390,78 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 871903000}
   m_Mesh: {fileID: 4300000, guid: 8e83878f3a6871e488241c080062417d, type: 3}
+--- !u!1 &878070679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 878070680}
+  - component: {fileID: 878070683}
+  - component: {fileID: 878070682}
+  - component: {fileID: 878070681}
+  m_Layer: 0
+  m_Name: 0misc2 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &878070680
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878070679}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 710.7, y: 15.5, z: -273.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 535675534}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &878070681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878070679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: Wait! How did you get out here?
+  hint: 
+  clip: {fileID: 8300000, guid: 6a53f3090d39f814a8cc612e6f53f970, type: 3}
+  time: 5
+  uses: 1
+--- !u!135 &878070682
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878070679}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 75
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &878070683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878070679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1 &895301427
 GameObject:
   m_ObjectHideFlags: 0
