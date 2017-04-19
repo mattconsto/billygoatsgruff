@@ -20,6 +20,6 @@ public class Dialogue : MonoBehaviour {
 	public Message root;
 
 	public void OnTriggerEnter(Collider col) {
-		if(col.gameObject.tag == "Player") controller.BeginDialogue(root);
+		if(col.gameObject.tag == "Player" && !col.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled) controller.BeginDialogue(root);
 	}
 }

@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour {
 		foreach(GameObject player in players) {
 			// if(player.activeSelf) {
 				player.GetComponent<NavMeshAgent>().enabled = true;
-				player.GetComponent<NavMeshAgent>().Stop();
+				player.GetComponent<NavMeshAgent>().isStopped = true;
 				player.GetComponent<PlayerController>().enabled = false;
 			// }
 		}
@@ -94,7 +94,7 @@ public class GameController : MonoBehaviour {
 			foreach(GameObject player in players) {
 				// if(player.activeSelf) {
 					player.GetComponent<NavMeshAgent>().enabled = true;
-					player.GetComponent<NavMeshAgent>().Stop();
+					player.GetComponent<NavMeshAgent>().isStopped = true;
 					player.GetComponent<PlayerController>().enabled = false;
 				// }
 			}
@@ -108,7 +108,7 @@ public class GameController : MonoBehaviour {
 			foreach(GameObject player in players) {
 				// if(player.activeSelf) {
 					player.GetComponent<NavMeshAgent>().enabled = true;
-					player.GetComponent<NavMeshAgent>().Stop();
+					player.GetComponent<NavMeshAgent>().isStopped = true;
 					player.GetComponent<PlayerController>().enabled = false;
 				// }
 			}
@@ -125,7 +125,7 @@ public class GameController : MonoBehaviour {
 
 				NavMeshAgent agent = players[i].GetComponent<NavMeshAgent>();
 				agent.SetDestination(players[_pointer].transform.position);
-				agent.Resume();
+				agent.isStopped = false;
 			}
 		}
 
@@ -159,12 +159,12 @@ public class GameController : MonoBehaviour {
 
 					NavMeshAgent agent = players[i].GetComponent<NavMeshAgent>();
 					agent.SetDestination(players[_pointer].transform.position);
-					agent.Resume();
+					agent.isStopped = false;
 				}
 
 				if(distance < 50 && _autofollow[i]) {
 					_autofollow[i] = false;
-					players[i].GetComponent<NavMeshAgent>().Stop();
+					players[i].GetComponent<NavMeshAgent>().isStopped = true;
 				}
 			}
 		}
