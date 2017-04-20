@@ -133,6 +133,7 @@ public class GameController : MonoBehaviour {
 			if(!_canceled) {
 				Time.timeScale = Time.timeScale > 0 ? 0 : 1;
 				titleHud.transform.Find("Menu/Begin").GetComponent<Text>().text = "Resume";
+				titleHud.transform.Find("Menu/Begin").GetComponent<Selectable>().Select();
 				titleHud.SetActive(!titleHud.activeSelf);
 				gameHud.SetActive(!gameHud.activeSelf);
 				_vingetteTarget = gameHud.activeSelf ? 0 : 1;
@@ -226,6 +227,7 @@ public class GameController : MonoBehaviour {
 					gameHud.transform.Find("Panel").gameObject.SetActive(true);
 					gameHud.transform.Find("Panel/Option 1").GetComponent<Text>().text = this.dialogue.children[0].text;
 					gameHud.transform.Find("Panel/Option 2").GetComponent<Text>().text = this.dialogue.children[1].text;
+					gameHud.transform.Find("Panel/Option 1").GetComponent<Selectable>().Select();
 					Cursor.visible = true;
 					break;
 				case MessageAction.END:
