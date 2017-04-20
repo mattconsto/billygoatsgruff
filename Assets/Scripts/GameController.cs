@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.AI;
 
 public class GameController : MonoBehaviour {
-	public enum State {MENU, GAME, PAUSE, DIALOGUE}
+	public enum State {MENU, GAME, PAUSE, DIALOGUE, END}
 	public State state = State.MENU;
 
 	public string message;
@@ -132,7 +132,6 @@ public class GameController : MonoBehaviour {
 		if(state != State.MENU && Input.GetButton("Cancel")) {
 			if(!_canceled) {
 				Time.timeScale = Time.timeScale > 0 ? 0 : 1;
-				titleHud.transform.Find("Menu/Begin").GetComponent<Text>().text = "Resume";
 				titleHud.transform.Find("Menu/Begin").GetComponent<Selectable>().Select();
 				titleHud.SetActive(!titleHud.activeSelf);
 				gameHud.SetActive(!gameHud.activeSelf);
@@ -260,5 +259,11 @@ public class GameController : MonoBehaviour {
 		gameHud.SetActive(true);
 		_vingetteTarget = 0;
 		dynamicCamera.GetComponent<CameraController>().cameraLocked = true;
+		titleHud.transform.Find("Menu/Begin").GetComponent<Text>().text = "Resume";
+	}
+
+	public void End() {
+		state = State.END;
+		titleHud.transform.Find("Menu/Begin").GetComponent<Text>().text = "Restart";
 	}
 }

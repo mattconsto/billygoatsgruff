@@ -20445,6 +20445,8 @@ GameObject:
   - component: {fileID: 1241661643}
   - component: {fileID: 1241661642}
   - component: {fileID: 1241661641}
+  - component: {fileID: 1241661644}
+  - component: {fileID: 1241661645}
   m_Layer: 0
   m_Name: Time Trigger 8
   m_TagString: Untagged
@@ -20459,7 +20461,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1241661639}
   m_LocalRotation: {x: -0, y: 0.68547237, z: -0, w: 0.7280987}
-  m_LocalPosition: {x: 773.1, y: 15.5, z: 121.9}
+  m_LocalPosition: {x: 818.2, y: 45.9, z: 186}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 1471203769}
@@ -20488,7 +20490,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 400, y: 50, z: 2}
+  m_Size: {x: 800, y: 200, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1241661643
 MonoBehaviour:
@@ -20502,6 +20504,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gizmoPath: UpGizmo.png
+--- !u!114 &1241661644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241661639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: The End
+  hint: 
+  clip: {fileID: 0}
+  time: Infinity
+  uses: -1
+--- !u!114 &1241661645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1241661639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
 --- !u!1 &1250851864
 GameObject:
   m_ObjectHideFlags: 0
