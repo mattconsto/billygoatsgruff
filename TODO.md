@@ -1,24 +1,27 @@
 TODO
 ====
 
-## Level design
+# General
 
-* Learn from the first coursework, start needs to be a mini tutorial
-* Possible add ford once you talk to the goddess
-* Tunnel underground for little billy goat
-* Farm is surrounded by trees with fencing
-* Linear map, with height variances, tributaries
-* Have mountain mesh clip through main mesh at the edges, and possibly elsewhere
-* Tree of life by the goddess
-* Break up the ground textures
-* Triggers that change global state machine => music, lighting, fog, etc.*
-* Bumpy terrain mesh, small structures
-* Snakey paths
-* Clouds?
+* NPC Dialogue and scripting, goats need to join you
+* Playtest the game and the challenges
+* Change the camera to only focus on a single goat, maybe look where you're going?
+* More height variances, and tributaries in the map?
+* Actually use animations
+* Fix unrestricted jumping (Duplicate terrain, one with trees, and one you can jump off)
+* Innovative Game for Third Coursework
+* Fix first dialogue playing instantly
+* Add an end screen, once you are on the valley.
+* Polish and bug fix
 
-## Scripting
+# Music:
 
-* Animations
-* Fix unrestricted jumping
-
-## Innovative Game for Third Coursework
+* CALL - Open Those Bright Eyes
+* THRESHOLD -Discovery Hit
+* BELLY - Serpentine Trek
+* TRIALS - Not As It Seems
+* GODESS -Frost Waltz
+* FATHER - Serpentine Trek
+* FIGHT - Clenched Teeth
+* RETURN - Reunited
+* MISC - Sleep and Then
