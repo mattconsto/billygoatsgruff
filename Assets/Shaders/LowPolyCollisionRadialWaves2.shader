@@ -21,7 +21,6 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0" {
 	SubShader {
 		Tags {"Queue" = "Geometry" "RenderType" = "Opaque"}
 		Blend SrcAlpha OneMinusSrcAlpha
-		Fog {Mode Off}
 
 		Pass {
 			Tags {"LightMode" = "ForwardBase"}
@@ -161,9 +160,9 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0" {
 					o.diffuseColor = float3(0.0, 0.0, 0.0);
 					o.specularColor = float3(0.0, 0.0, 0.0);
 
-					o.fogDepth = length(UnityObjectToViewPos(v.vertex));
+					o.fogDepth = length(UnityObjectToClipPos(v.vertex));
 					#if defined(FOG_LINEAR)
-						o.fogDepth = o.fogDepth * unity_FogParams.z + unity_FogParams.w;
+						o.fogDepth = clamp(o.fogDepth * unity_FogParams.z + unity_FogParams.w, 0.0, 1.0);
 					#elif defined(FOG_EXP)
 						o.fogDepth = exp2(-(o.fogDepth * unity_FogParams.y));
 					#elif defined(FOG_EXP2)
@@ -271,7 +270,6 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0" {
 			Name "ShadowCaster"
 			Tags {"LightMode" = "ShadowCaster"}
 
-			Fog {Mode Off}
 			ZWrite On ZTest Less Cull Off
 			Offset [_ShadowBias],[_ShadowBiasSlope]
 
