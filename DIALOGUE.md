@@ -111,3 +111,7 @@ MIDDLE	Where are the others?
 BIG	Where's pipsqueak?
 BIG	Where's my brother?
 BIG	Where are the others?
+
+NARATE	This is not the place, for a young billy-goat to be.
+NARATE	A quiet rest, amidst the forest.
+NARATE	How serene.
