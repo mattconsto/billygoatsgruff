@@ -168,7 +168,7 @@ Shader "Trolltunga/LowPolyCollisionRadialWaves 2.0" {
 					#elif defined(FOG_EXP2)
 						o.fogDepth = exp2(-(o.fogDepth * unity_FogParams.y)*(o.fogDepth * unity_FogParams.y));
 					#else
-						o.fogDepth = 0.0;
+						o.fogDepth = 1.0;
 					#endif
 
 					return o;
