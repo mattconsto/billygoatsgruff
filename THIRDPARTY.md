@@ -3,6 +3,7 @@ Third Party Notices
 
 ## Images
 
+* [Cinema Themes 2 by Cinema Suite Inc. (Unity Asset Store)](https://assetstore.unity3d.com/en/content/20394)
 * [Common Controller by Rahazan (CC BY 3.0)](http://opengameart.org/content/common-controller)
 * [Keyboard Keys by TRBRY (CC BY 3.0)](http://opengameart.org/content/keyboard-keys)
 * [Game Wood panel by PINKCANNON (CC BY 3.0)](http://opengameart.org/content/game-wood-panel)

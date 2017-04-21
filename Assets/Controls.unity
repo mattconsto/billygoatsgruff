@@ -5326,48 +5326,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f0d2c3cd7721cbd4196a47beaec8a76f, type: 3}
   m_PrefabInternal: {fileID: 154886626}
---- !u!1 &156442441
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 156442443}
-  - component: {fileID: 156442442}
-  m_Layer: 0
-  m_Name: WindZone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!182 &156442442
-WindZone:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 156442441}
-  m_Enabled: 1
-  m_Mode: 0
-  m_Radius: 20
-  m_WindMain: 97.41
-  m_WindTurbulence: 1
-  m_WindPulseMagnitude: 0.5
-  m_WindPulseFrequency: 0.01
---- !u!4 &156442443
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 156442441}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 26.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158043228
 GameObject:
   m_ObjectHideFlags: 0
@@ -12658,8 +12616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   darkColor: {r: 0.014705896, g: 0.014705896, b: 0.014705896, a: 1}
   lightColor: {r: 0.97794116, g: 0.97794116, b: 0.97794116, a: 1}
-  darkDensity: 0.02
-  lightDensity: 0.003
+  darkDensity: 0.004
+  lightDensity: 0.001
 --- !u!1 &664397942
 GameObject:
   m_ObjectHideFlags: 0
@@ -18286,6 +18244,7 @@ GameObject:
   - component: {fileID: 1068433176}
   - component: {fileID: 1068433181}
   - component: {fileID: 1068433182}
+  - component: {fileID: 1068433183}
   m_Layer: 0
   m_Name: Game Camera
   m_TagString: MainCamera
@@ -18459,6 +18418,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1068433183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1068433175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 1506874396cfa3e478780e6b4d6d8944, type: 2}
 --- !u!1001 &1073823994
 Prefab:
   m_ObjectHideFlags: 0
@@ -27914,7 +27885,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1782538650
 Transform:
   m_ObjectHideFlags: 0
