@@ -10,7 +10,7 @@ Third Party Notices
 ## Fonts
 
 * [Permanent Marker by Font Diner (Apache 2.0)](https://fonts.google.com/specimen/Permanent+Marker)
-* [Sketch Gothic School (Non-Commercial, See PDF)](http://www.dafont.com/sketch-gothic-school.font)
+* [Sketch Gothic School (Custom Non-Commercial, See PDF)](http://www.dafont.com/sketch-gothic-school.font)
 
 ## Models
 
@@ -28,6 +28,12 @@ Third Party Notices
 * [Reunited by Kevin MacLeod (CC BY 3.0)](https://incompetech.com/music/royalty-free)
 * [Serpentine Trek by Kevin MacLeod (CC BY 3.0)](https://incompetech.com/music/royalty-free)
 * [Sleep and Then by Kevin MacLeod (CC BY 3.0)](https://incompetech.com/music/royalty-free)
+
+## Scripts
+
+* [Google VR SDK for Unity by Google (Apache 2.0)](https://developers.google.com/vr/unity/)
+* [Lowpoly Water Shaders by Trolltunga kreative (Custom Commercial, See TXT)](http://battlemaze.com/?p=153)
+* [Unity Lowpoly Shader by Pavel Kouřil (MIT)](https://github.com/pavelkouril/unity-lowpoly-shader/)
 
 ## Sound Effects
 
