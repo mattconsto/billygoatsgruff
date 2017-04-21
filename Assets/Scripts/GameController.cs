@@ -238,7 +238,7 @@ public class GameController : MonoBehaviour {
 					players[_pointer].SetActive(false);
 					Cursor.visible = false;
 					break;
-				case MessageAction.OVER:
+				case MessageAction.FINISH:
 					gameHud.transform.Find("Panel").gameObject.SetActive(false);
 					Cursor.visible = false;
 					End();

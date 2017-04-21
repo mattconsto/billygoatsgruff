@@ -6737,7 +6737,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 266635065}
-  m_LocalRotation: {x: -0.5152521, y: -0.11098876, z: -0.17895262, w: 0.83076626}
+  m_LocalRotation: {x: -0.5152522, y: -0.11098877, z: -0.17895263, w: 0.8307664}
   m_LocalPosition: {x: -119.88782, y: 26.762653, z: 134.60817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14283,7 +14283,7 @@ GameObject:
   - component: {fileID: 785494519}
   - component: {fileID: 785494518}
   - component: {fileID: 785494517}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18297,7 +18297,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294934783
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -19174,7 +19174,7 @@ GameObject:
   - component: {fileID: 1126476996}
   - component: {fileID: 1126476998}
   - component: {fileID: 1126476997}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collider Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19223,7 +19223,7 @@ Terrain:
   m_SplatMapDistance: 0
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
-  m_DrawHeightmap: 0
+  m_DrawHeightmap: 1
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
   m_MaterialType: 0
@@ -23309,7 +23309,7 @@ GameObject:
   - component: {fileID: 1432504537}
   - component: {fileID: 1432504536}
   - component: {fileID: 1432504535}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25041,7 +25041,7 @@ GameObject:
   - component: {fileID: 1594027485}
   - component: {fileID: 1594027484}
   - component: {fileID: 1594027483}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
