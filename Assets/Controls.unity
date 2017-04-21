@@ -12261,6 +12261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3925f8d1fd4fc246a7ae20bb7a78b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1068433175}
   viewer: {fileID: 1653320582}
   canvases:
   - {fileID: 1718207559}
@@ -18282,7 +18283,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -18334,10 +18335,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1348ee15057fbfa46910e623046d6f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDMinimum: 20
-  cameraAngle: -65
+  controller: {fileID: 1745283055}
+  cameraDistance: 40
+  cameraAngle: -60
   cameraLocked: 0
   cameraTarget: {fileID: 569514784}
+  offset: {x: 0, y: 0, z: 0}
+  offsetMultiplier: {x: 30, y: 1, z: 15}
 --- !u!82 &1068433182
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19223,7 +19227,7 @@ Terrain:
   m_SplatMapDistance: 0
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
-  m_DrawHeightmap: 1
+  m_DrawHeightmap: 0
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
   m_MaterialType: 0
@@ -22614,6 +22618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1745283055}
+  camera: {fileID: 1068433181}
   speed: 25
   jump: 650
   rotation: 0.5
@@ -26088,7 +26093,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1159445922}
   m_Script: {fileID: 11500000, guid: a40b544b8c3553c40852ae7ad35a9343, type: 3}
---- !u!114 &1653320584
+--- !u!114 &1653320583
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -26099,6 +26104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb51ea2b3c56ca6468c15af9554fd057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1068433175}
 --- !u!1001 &1654000408
 Prefab:
   m_ObjectHideFlags: 0
@@ -27296,6 +27302,7 @@ MonoBehaviour:
   - {fileID: 1382384133}
   - {fileID: 1950956363}
   - {fileID: 1791636609}
+  _pointer: 0
   hintText: {fileID: 895301429}
   messageText: {fileID: 597298856}
   narrationSource: {fileID: 1560223280}
@@ -27885,7 +27892,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1782538650
 Transform:
   m_ObjectHideFlags: 0
@@ -28309,6 +28316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1745283055}
+  camera: {fileID: 1068433181}
   speed: 15
   jump: 750
   rotation: 0.5
@@ -31053,6 +31061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1745283055}
+  camera: {fileID: 1068433181}
   speed: 22.5
   jump: 1500
   rotation: 0.5

@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class VRSwitcher : MonoBehaviour, IPointerClickHandler, ISubmitHandler {
+	public GameObject camera;
 	public GvrViewer viewer;
 	public GameObject[] canvases;
 	public Selectable selectable;
@@ -19,6 +20,7 @@ public class VRSwitcher : MonoBehaviour, IPointerClickHandler, ISubmitHandler {
 		foreach(GameObject canvas in canvases) {
 			canvas.GetComponent<Canvas>().renderMode = viewer.VRModeEnabled ? RenderMode.WorldSpace : RenderMode.ScreenSpaceCamera;
 			if(canvas.GetComponent<GraphicRaycaster>() != null) canvas.GetComponent<GraphicRaycaster>().enabled = !viewer.VRModeEnabled;
+			camera.GetComponent<GvrHead>().trackRotation = viewer.VRModeEnabled;
 		}
 
 		selectable.Select();

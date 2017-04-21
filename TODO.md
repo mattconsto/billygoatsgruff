@@ -5,7 +5,6 @@ TODO
 
 * NPC Dialogue and scripting, goats need to join you
 * Playtest the game and the challenges
-* Change the camera to only focus on a single goat, maybe look where you're going?
 * Actually use animations
 * Fix first dialogue playing instantly
 * Polish and bug fix
@@ -15,7 +14,7 @@ TODO
 # Music:
 
 * CALL - Open Those Bright Eyes
-* THRESHOLD -Discovery Hit
+* THRESHOLD - Discovery Hit
 * BELLY - Serpentine Trek
 * TRIALS - Not As It Seems
 * GODESS -Frost Waltz

@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour {
 	private bool _hintVisible = false;
 
 	public GameObject[] players; 
-	private int _pointer = 0;
+	public int _pointer = 0;
 
 	private bool _canceled = false;
 
@@ -91,10 +91,12 @@ public class GameController : MonoBehaviour {
 
 		if(state == State.GAME && Input.GetButton("Fire1") && _switchTimer <= 0) {
 			_switchTimer = 0.25f;
+			int i = 0;
 			foreach(GameObject player in players) {
 				// if(player.activeSelf) {
 					player.GetComponent<NavMeshAgent>().enabled = true;
 					player.GetComponent<NavMeshAgent>().isStopped = true;
+					_autofollow[i++] = false;
 					player.GetComponent<PlayerController>().enabled = false;
 				// }
 			}
@@ -105,10 +107,12 @@ public class GameController : MonoBehaviour {
 
 		if(state == State.GAME && Input.GetButton("Fire2") && _switchTimer <= 0) {
 			_switchTimer = 0.25f;
+			int i = 0;
 			foreach(GameObject player in players) {
 				// if(player.activeSelf) {
 					player.GetComponent<NavMeshAgent>().enabled = true;
 					player.GetComponent<NavMeshAgent>().isStopped = true;
+					_autofollow[i++] = false;
 					player.GetComponent<PlayerController>().enabled = false;
 				// }
 			}
@@ -153,7 +157,7 @@ public class GameController : MonoBehaviour {
 
 				float distance = Vector3.Distance(players[_pointer].transform.position, players[i].transform.position);
 
-				if(distance > 75 && !_autofollow[i]) {
+				if(distance > 50 && !_autofollow[i]) {
 					_pathfindTimer = 0.5f; // Twice a second is enough
 					_autofollow[i] = true;
 
@@ -162,7 +166,7 @@ public class GameController : MonoBehaviour {
 					agent.isStopped = false;
 				}
 
-				if(distance < 50 && _autofollow[i]) {
+				if(distance < 30 && _autofollow[i]) {
 					_autofollow[i] = false;
 					players[i].GetComponent<NavMeshAgent>().isStopped = true;
 				}
