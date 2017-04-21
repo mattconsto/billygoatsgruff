@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public enum MessageAction {
-	NONE = 0, CHOICE = 1, END = 2, KILL = 3
+	NONE = 0, CHOICE = 1, END = 2, KILL = 3, FINISH = 4
 }
 
 [System.Serializable]
