@@ -19,8 +19,8 @@ public class CameraController : MonoBehaviour {
 
 	public void Start() {
 		// Needs to run twice, not sure why.
-		Update(); LerpTransform(transform, cameraTarget, 1);
-		Update(); LerpTransform(transform, cameraTarget, 1);
+		LateUpdate(); LerpTransform(transform, cameraTarget, 1);
+		LateUpdate(); LerpTransform(transform, cameraTarget, 1);
 	}
 
 	public static void LerpTransform(Transform t1, Transform t2, float t) {
@@ -29,7 +29,7 @@ public class CameraController : MonoBehaviour {
 		t1.localScale = Vector3.Lerp(t1.localScale, t2.localScale, t);
 	}
 
-	public void Update() {
+	public void LateUpdate() {
 		// Average the players position, to calculate the distance between the players.
 		if(cameraLocked) {
 			// Position and rotate the camera

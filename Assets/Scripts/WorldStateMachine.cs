@@ -28,12 +28,11 @@ public class WorldStateMachine : MonoBehaviour {
 		currentTime = targetTime;
 	}
 
-	public void FixedUpdate() {
+	public void Update() {
 		// Lerp forwards towards desired time
 		currentTime = InterpolatedLerp(currentTime, targetTime, 0.25f * Time.deltaTime, 24);
 
 		float angle = 2 * Mathf.PI * ((currentTime + 18f) % 24f) / 24f;
-		float cos   = Mathf.Cos(angle);
 
 		sunObject.transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * 100f;
 		moonObject.transform.position = new Vector3(Mathf.Cos(-angle), Mathf.Sin(-angle), 0) * 100f;
