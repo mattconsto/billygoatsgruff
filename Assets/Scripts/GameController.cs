@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour {
 		players[_pointer].GetComponent<PlayerController>().enabled = true;
 	}
 
-	public void Update() {
+	public void FixedUpdate() {
 		_pathfindTimer -= Time.deltaTime;
 		_switchTimer -= Time.deltaTime;
 		_hintTimer -= Time.deltaTime;

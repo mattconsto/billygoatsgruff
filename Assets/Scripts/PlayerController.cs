@@ -18,10 +18,13 @@ public class PlayerController : MonoBehaviour {
 		_rb = GetComponent<Rigidbody>();
 	}
 
+	public void Update() {
+		camera.offset = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+	}
+
 	public void FixedUpdate() {
 		if(controller.state == GameController.State.GAME) {
 			_rotation = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-			camera.offset = _rotation;
 
 			// Rotate smoothly to the desired angle.
 			if(_rotation.magnitude > 0.1) {

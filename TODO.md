@@ -8,7 +8,6 @@ TODO
 * Actually use animations
 * Fix first dialogue playing instantly
 * Polish and bug fix
-* Fix unrestricted jumping (Duplicate terrain, one with trees, and one you can jump off)
 * Innovative Game for Third Coursework
 
 # Music:
