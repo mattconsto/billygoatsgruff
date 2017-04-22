@@ -33,9 +33,10 @@ public class WorldStateMachine : MonoBehaviour {
 		currentTime = InterpolatedLerp(currentTime, targetTime, 0.25f * Time.deltaTime, 24);
 
 		float angle = 2 * Mathf.PI * ((currentTime + 18f) % 24f) / 24f;
+		float cos   = Mathf.Cos(angle);
 
-		sunObject.transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * 500f;
-		moonObject.transform.position = new Vector3(Mathf.Cos(-angle), Mathf.Sin(-angle), 0) * 500f;
+		sunObject.transform.position = new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * 100f;
+		moonObject.transform.position = new Vector3(Mathf.Cos(-angle), Mathf.Sin(-angle), 0) * 100f;
 		sunObject.transform.LookAt(Vector3.zero);
 		moonObject.transform.LookAt(Vector3.zero);
 

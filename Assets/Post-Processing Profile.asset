@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Settings:
       excludeSkybox: 1
   antialiasing:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       method: 0
       fxaaSettings:
@@ -97,10 +97,10 @@ MonoBehaviour:
       logMin: -8
       logMax: 4
   bloom:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       bloom:
-        intensity: 0.75
+        intensity: 1.58
         threshold: 1.5
         softKnee: 1
         radius: 4
@@ -279,7 +279,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       lut: {fileID: 2800000, guid: 881497cfdb5687f4aadb140ba263d7cc, type: 3}
-      contribution: 0.187
+      contribution: 0.15
   chromaticAberration:
     m_Enabled: 1
     m_Settings:
