@@ -247,6 +247,11 @@ public class GameController : MonoBehaviour {
 					Cursor.visible = false;
 					End();
 					break;
+				case MessageAction.SUICIDE:
+					gameHud.transform.Find("Panel").gameObject.SetActive(false);
+					// players[_pointer].SetActive(false);
+					Cursor.visible = false;
+					break;
 			}
 		}
 	}
