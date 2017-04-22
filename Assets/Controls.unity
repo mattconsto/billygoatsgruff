@@ -1212,6 +1212,82 @@ RectTransform:
   m_AnchoredPosition: {x: -1.4140939, y: 113.21666}
   m_SizeDelta: {x: 923, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &83349910 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100010, guid: f62467e4cf46549468070ca86b639add, type: 3}
+  m_PrefabInternal: {fileID: 907566649}
+--- !u!114 &83349911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83349910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cad1467df721e48bcc5050762745f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  root:
+    text: Hello! I am lost and in need of some help. Lets stay a while, just by ourselves.
+    clip: {fileID: 8300000, guid: be99d412c889fc24583df6fa035adb86, type: 3}
+    action: 0
+    children:
+    - text: You may have heard tales of fields and trolls, but there is nothing but
+        hardship if you continue along.
+      clip: {fileID: 8300000, guid: 64b783c8e753c10449cab2f183bd5dd8, type: 3}
+      action: 1
+      children:
+      - text: I'm sorry doe, I'd love to stay. But our journey calls us, we are on
+          our way.
+        clip: {fileID: 8300000, guid: edd42572971bddf4f8095e646ec6d2ee, type: 3}
+        action: 2
+        children: []
+      - text: The journey is weary, we'd love to stay.
+        clip: {fileID: 8300000, guid: 819dcf0473da8db4e83c1166972cd6f6, type: 3}
+        action: 0
+        children:
+        - text: For the little billy-goats the journey was over. Content to stay in
+            the forest forever.
+          clip: {fileID: 8300000, guid: e46ba6e4b664ef240bf54588913a806d, type: 3}
+          action: 4
+          children: []
+--- !u!135 &83349912
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83349910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 18.08
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &83349913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83349910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 6.4, z: 5.38}
+  m_Center: {x: 0, y: 0, z: 0.34}
+--- !u!114 &83349914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 83349910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!4 &87430977 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: f6b772f8e16cf1040a7e1a2d870ae136, type: 3}
@@ -1545,7 +1621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &115972846
 MonoBehaviour:
@@ -5271,6 +5347,78 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 146815108}
+--- !u!1 &149025375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 149025376}
+  - component: {fileID: 149025379}
+  - component: {fileID: 149025378}
+  - component: {fileID: 149025377}
+  m_Layer: 8
+  m_Name: Little Billy Goat Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &149025376
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149025375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 520.83, y: 17.98, z: -85.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1712359052}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &149025377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149025375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
+--- !u!114 &149025378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149025375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: Trip, trap! trip, trap!
+  hint: 
+  clip: {fileID: 8300000, guid: 3e698fdd10ef3854dab32c3afaedf09c, type: 3}
+  time: 2
+  uses: -1
+--- !u!135 &149025379
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149025375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &152937449
 Prefab:
   m_ObjectHideFlags: 0
@@ -7203,7 +7351,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &299175999
 MonoBehaviour:
@@ -10162,6 +10310,22 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 28a326458c3d25c4b9d5b2f014788401, type: 3}
   m_PrefabInternal: {fileID: 514224847}
+--- !u!1 &514897000 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
+  m_PrefabInternal: {fileID: 1394917477}
+--- !u!65 &514897002
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 514897000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &523484818
 GameObject:
   m_ObjectHideFlags: 0
@@ -10438,7 +10602,6 @@ Transform:
   - {fileID: 1250851865}
   - {fileID: 1923019817}
   - {fileID: 459041096}
-  - {fileID: 812036891}
   - {fileID: 1238247174}
   - {fileID: 1386810361}
   - {fileID: 115972845}
@@ -10547,7 +10710,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &537595102
 MonoBehaviour:
@@ -14385,79 +14548,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f0d2c3cd7721cbd4196a47beaec8a76f, type: 3}
   m_PrefabInternal: {fileID: 807926714}
---- !u!1 &812036890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 812036891}
-  - component: {fileID: 812036894}
-  - component: {fileID: 812036893}
-  - component: {fileID: 812036892}
-  m_Layer: 0
-  m_Name: 1call1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &812036891
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 812036890}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -847.8, y: 40.6, z: -134.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 535675534}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &812036892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 812036890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1745283055}
-  text: Once upon a time, there was a little billy-goat "gruff", who longed for adventure
-    beyond his paddock.
-  hint: Use WASD or Gamepad to move
-  clip: {fileID: 8300000, guid: a354fe8b788468d4ca3d0889368ec325, type: 3}
-  time: 5
-  uses: 1
---- !u!65 &812036893
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 812036890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 50, z: 50}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &812036894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 812036890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gizmoPath: TextGizmo.png
 --- !u!1001 &816501497
 Prefab:
   m_ObjectHideFlags: 0
@@ -15260,6 +15350,87 @@ Transform:
   m_Father: {fileID: 1229906912}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &869286156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 869286157}
+  - component: {fileID: 869286159}
+  - component: {fileID: 869286158}
+  m_Layer: 9
+  m_Name: Medium Goat Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &869286157
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869286156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1003825707}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869286158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869286156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cad1467df721e48bcc5050762745f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  root:
+    text: "Who\u2019s THAT tripping over my bridge?"
+    clip: {fileID: 8300000, guid: b0d9f27ec9c64634f8f6af11f7822135, type: 3}
+    action: 1
+    children:
+    - text: "Oh! It\u2019s the second billy-goat Gruff, and I\u2019m going up to the
+        hill-side to make myself fat."
+      clip: {fileID: 8300000, guid: 961f5bf1b9f6e104abb5c30db0d8ae37, type: 3}
+      action: 0
+      children:
+      - text: "Now, I\u2019m coming to gobble you up."
+        clip: {fileID: 8300000, guid: cdf49e3cd96bc2d4f92f899fb815062d, type: 3}
+        action: 3
+        children:
+        - text: And with that, the second billy-goat was no more.
+          clip: {fileID: 8300000, guid: f32bfe624d202264c82f88f45d21fece, type: 3}
+          action: 2
+          children: []
+    - text: "Oh, no! don\u2019t take me, wait a little longer until the big billy-goat
+        Gruff comes, he\u2019s much bigger."
+      clip: {fileID: 8300000, guid: a082e2abcb0eab341b225e25daf25b94, type: 3}
+      action: 0
+      children:
+      - text: Very well! be off with you
+        clip: {fileID: 8300000, guid: 84bd70655dd53834d98e8941f9718760, type: 3}
+        action: 2
+        children: []
+--- !u!135 &869286159
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 869286156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &871903000
 GameObject:
   m_ObjectHideFlags: 0
@@ -16848,6 +17019,37 @@ Transform:
   - {fileID: 1454101830}
   m_Father: {fileID: 2036236232}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1003825706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1003825707}
+  m_Layer: 0
+  m_Name: Dialogue Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1003825707
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003825706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1358919027}
+  - {fileID: 869286157}
+  - {fileID: 1912908569}
+  m_Father: {fileID: 1394917478}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1008463222
 Transform:
@@ -18594,7 +18796,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1101748964
 MonoBehaviour:
@@ -19839,7 +20041,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1228279036
 MonoBehaviour:
@@ -20051,7 +20253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1238247175
 MonoBehaviour:
@@ -20267,9 +20469,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1745283055}
-  text: The End
-  hint: 
-  clip: {fileID: 0}
+  text: "The billy-goats went up to the hillside where they got so fat they were scarce
+    able to walk home again! And if the fat hasn\u2019t fallen off them, why they\u2019re
+    still fat; and so: Snip, snap, snout, This tale\u2019s told out."
+  hint: The End
+  clip: {fileID: 8300000, guid: ea9ac4bc3209f104bbb7f63a0bfa1060, type: 3}
   time: Infinity
   uses: -1
 --- !u!114 &1241661645
@@ -20695,49 +20899,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1745283055}
   root:
-    text: "Who\u2019s THAT tripping over my bridge?"
-    clip: {fileID: 0}
-    action: 1
-    children:
-    - text: "Oh! It\u2019s the second billy-goat Gruff, and I\u2019m going up to the
-        hill-side to make myself fat."
-      clip: {fileID: 0}
-      action: 0
-      children:
-      - text: "Now, I\u2019m coming to gobble you up."
-        clip: {fileID: 0}
-        action: 0
-        children:
-        - text: And with that, the second billy-goat was no more.
-          clip: {fileID: 0}
-          action: 3
-          children: []
-    - text: "Oh, no! don\u2019t take me, wait a little longer until the big billy-goat
-        Gruff comes, he\u2019s much bigger."
-      clip: {fileID: 0}
-      action: 0
-      children:
-      - text: Very well! be off with you
-        clip: {fileID: 0}
-        action: 2
-        children: []
---- !u!114 &1281648128
-MonoBehaviour:
+    text: Go away little billy-goat, can't you see I'm eating.
+    clip: {fileID: 8300000, guid: d5ebdc0ad2dc479479432cec1e5a0a99, type: 3}
+    action: 2
+    children: []
+--- !u!65 &1281648128
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281648126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1745283055}
-  text: 
-  hint: (Press F to interact)
-  clip: {fileID: 0}
-  time: 1
-  uses: -1
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 6.4, z: 5.38}
+  m_Center: {x: 0, y: 0, z: 0.34}
 --- !u!135 &1281648129
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20748,7 +20925,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.76
+  m_Radius: 10
   m_Center: {x: 0, y: 2.74, z: 0}
 --- !u!1 &1286338424
 GameObject:
@@ -20779,7 +20956,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1286338426
 MonoBehaviour:
@@ -21637,7 +21814,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1321400592
 MonoBehaviour:
@@ -22148,6 +22325,87 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1353521954}
   m_Mesh: {fileID: 4300000, guid: 8e83878f3a6871e488241c080062417d, type: 3}
+--- !u!1 &1358919026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1358919027}
+  - component: {fileID: 1358919029}
+  - component: {fileID: 1358919028}
+  m_Layer: 8
+  m_Name: Little Goat Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1358919027
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1358919026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1003825707}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1358919028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1358919026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cad1467df721e48bcc5050762745f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  root:
+    text: "Who\u2019s that tripping over my bridge?"
+    clip: {fileID: 8300000, guid: 3701e4e3f45937a4ea5ebc675af35c82, type: 3}
+    action: 1
+    children:
+    - text: "Oh! it is only I, the tiniest billy-goat Gruff; I\u2019m going up the
+        hill-side to make myself fat"
+      clip: {fileID: 8300000, guid: 48497c8f33fabfe4a84bc5584c943162, type: 3}
+      action: 0
+      children:
+      - text: "Now, I\u2019m coming to gobble you up."
+        clip: {fileID: 8300000, guid: 93f40b0fc26d70e4f80b50f39ffc2c7b, type: 3}
+        action: 3
+        children:
+        - text: And with that, the tiniest billy-goat was no more.
+          clip: {fileID: 8300000, guid: 2214d834d45b8e546a0bc3819059ee71, type: 3}
+          action: 2
+          children: []
+    - text: "Oh, no! pray don\u2019t take me. I\u2019m too little, that I am. Wait
+        a bit till the second billy-goat Gruff comes, he\u2019s much bigger than I."
+      clip: {fileID: 8300000, guid: c114c52919d876948a2079bf1604288e, type: 3}
+      action: 0
+      children:
+      - text: Well! be off with you
+        clip: {fileID: 8300000, guid: 9db6ad16ce9b0694bbde3449e9951cec, type: 3}
+        action: 2
+        children: []
+--- !u!135 &1358919029
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1358919026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1376561876
 GameObject:
   m_ObjectHideFlags: 0
@@ -22570,7 +22828,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1386810362
 MonoBehaviour:
@@ -22686,31 +22944,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 522.7
+      value: 519.1
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.7
+      value: 14.8
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -68.5
+      value: -69.3
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.752707
+      value: -0.56640625
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6583557
+      value: 0.82412624
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_RootOrder
@@ -22730,7 +22988,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400050, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -97.651
+      value: -69
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fb72103d4ac3b744b9bbde5a32187263, type: 3}
@@ -25314,49 +25572,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1745283055}
   root:
-    text: "Who\u2019s THAT tripping over my bridge?"
-    clip: {fileID: 0}
-    action: 1
+    text: Hello, little billy-goat, go ahead, spit it out.
+    clip: {fileID: 8300000, guid: 621d955c440dce846b40372bc7d7f2f4, type: 3}
+    action: 0
     children:
-    - text: "Oh! It\u2019s the second billy-goat Gruff, and I\u2019m going up to the
-        hill-side to make myself fat."
-      clip: {fileID: 0}
+    - text: Last night I dreamed of leaving this place.
+      clip: {fileID: 8300000, guid: 8db575ed89db44b49833191a60a18bb6, type: 3}
       action: 0
       children:
-      - text: "Now, I\u2019m coming to gobble you up."
-        clip: {fileID: 0}
-        action: 0
-        children:
-        - text: And with that, the second billy-goat was no more.
-          clip: {fileID: 0}
-          action: 3
-          children: []
-    - text: "Oh, no! don\u2019t take me, wait a little longer until the big billy-goat
-        Gruff comes, he\u2019s much bigger."
-      clip: {fileID: 0}
-      action: 0
-      children:
-      - text: Very well! be off with you
-        clip: {fileID: 0}
+      - text: We all dream of such silly things.
+        clip: {fileID: 8300000, guid: 6b7e2cbd310f6a348ac8de4192ea1a9e, type: 3}
         action: 2
         children: []
---- !u!114 &1600070064
-MonoBehaviour:
+--- !u!65 &1600070064
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1600070062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1745283055}
-  text: 
-  hint: (Press F to interact)
-  clip: {fileID: 0}
-  time: 1
-  uses: -1
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 6.4, z: 5.38}
+  m_Center: {x: 0, y: 0, z: 0.34}
 --- !u!135 &1600070065
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25367,7 +25606,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.76
+  m_Radius: 10
   m_Center: {x: 0, y: 2.74, z: 0}
 --- !u!1 &1601346328
 GameObject:
@@ -26216,7 +26455,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1670269000
 MonoBehaviour:
@@ -26898,6 +27137,9 @@ Transform:
   m_Children:
   - {fileID: 746777711}
   - {fileID: 1064315874}
+  - {fileID: 149025376}
+  - {fileID: 2060862543}
+  - {fileID: 2043688177}
   m_Father: {fileID: 1484883596}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28423,7 +28665,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1792780918
 MonoBehaviour:
@@ -30441,6 +30683,89 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: f0d2c3cd7721cbd4196a47beaec8a76f, type: 3}
   m_PrefabInternal: {fileID: 1910676001}
+--- !u!1 &1912908568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1912908569}
+  - component: {fileID: 1912908571}
+  - component: {fileID: 1912908570}
+  m_Layer: 10
+  m_Name: Big Goat Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1912908569
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912908568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1003825707}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912908570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912908568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cad1467df721e48bcc5050762745f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  root:
+    text: "WHO\u2019S THAT tramping over my bridge?"
+    clip: {fileID: 8300000, guid: eaa788b653936b341ad129bb12f61622, type: 3}
+    action: 0
+    children:
+    - text: BAH IT IS I! THE BIG BILLY-GOAT GRUFF
+      clip: {fileID: 8300000, guid: c271fc85c8fe15d4ebfdb47c264c8a89, type: 3}
+      action: 0
+      children:
+      - text: "Now, I\u2019m coming to gobble you up"
+        clip: {fileID: 8300000, guid: 2e2492aedeae0024dbc22e037e9e3b84, type: 3}
+        action: 0
+        children:
+        - text: "Well, come along! I\u2019ve got two spears,"
+          clip: {fileID: 8300000, guid: cbdd04e014b6f454cbd896fe3c3c672e, type: 3}
+          action: 0
+          children:
+          - text: "I\u2019ll poke your eyeballs out of your ears."
+            clip: {fileID: 8300000, guid: b69fc69c888ad4f46b10769f2f31c293, type: 3}
+            action: 0
+            children:
+            - text: "I\u2019ve got besides two curling-stones,"
+              clip: {fileID: 8300000, guid: c6444d569b3e65f46965c083767c0ce9, type: 3}
+              action: 3
+              children:
+              - text: "And I\u2019ll crush you to bits, body and bones."
+                clip: {fileID: 8300000, guid: 3673711e4eeefac4b9330ebae1085f97, type: 3}
+                action: 2
+                children: []
+--- !u!135 &1912908571
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912908568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1922661150
 GameObject:
   m_ObjectHideFlags: 0
@@ -31847,6 +32172,78 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gizmoPath: UpGizmo.png
+--- !u!1 &2043688176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2043688177}
+  - component: {fileID: 2043688180}
+  - component: {fileID: 2043688179}
+  - component: {fileID: 2043688178}
+  m_Layer: 10
+  m_Name: Big Billy Goat Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043688177
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043688176}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 520.83, y: 17.98, z: -85.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1712359052}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043688178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043688176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
+--- !u!114 &2043688179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043688176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: TRIP, TRAP! TRIP, TRAP! TRIP, TRAP!
+  hint: 
+  clip: {fileID: 8300000, guid: 0bd4891095df589439da86467e9f25c6, type: 3}
+  time: 2
+  uses: -1
+--- !u!135 &2043688180
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043688176}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2044235872
 GameObject:
   m_ObjectHideFlags: 0
@@ -31876,7 +32273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2044235874
 MonoBehaviour:
@@ -32014,6 +32411,78 @@ Transform:
   m_Father: {fileID: 1771623749}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 39.503002, y: -106.366005, z: 40.320004}
+--- !u!1 &2060862542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2060862543}
+  - component: {fileID: 2060862546}
+  - component: {fileID: 2060862545}
+  - component: {fileID: 2060862544}
+  m_Layer: 9
+  m_Name: Medium Billy Goat Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2060862543
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060862542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 520.83, y: 17.98, z: -85.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1712359052}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2060862544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060862542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
+--- !u!114 &2060862545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060862542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: Trip, trap! trip, trap! trip, trap!
+  hint: 
+  clip: {fileID: 8300000, guid: 176c83ea31ff47d44a58510ac93364f6, type: 3}
+  time: 2
+  uses: -1
+--- !u!135 &2060862546
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2060862542}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2063991082
 GameObject:
   m_ObjectHideFlags: 0
@@ -32043,7 +32512,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 535675534}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2063991084
 MonoBehaviour:

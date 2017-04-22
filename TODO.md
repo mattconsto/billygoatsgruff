@@ -5,10 +5,7 @@ TODO
 
 * NPC Dialogue and scripting, goats need to join you
 * Playtest the game and the challenges
-* Actually use animations
-* Fix first dialogue playing instantly
 * Polish and bug fix
-* Innovative Game for Third Coursework
 
 # Music:
 
