@@ -6503,22 +6503,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: e3c05f2108f7db14a92889e3d1710076, type: 3}
   m_PrefabInternal: {fileID: 1271052628}
---- !u!114 &227527909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 227527908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726d5669d8ec4fc4f856d6fbb0c9c2cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  source: {fileID: 0}
-  objects: []
-  impulse: 0
-  destroy: {fileID: 1832613257}
 --- !u!54 &227527913
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6548,6 +6532,22 @@ MonoBehaviour:
   objects:
   - {fileID: 1382384133}
   impulse: 0
+--- !u!114 &227527915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227527908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726d5669d8ec4fc4f856d6fbb0c9c2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
+  source: {fileID: 0}
+  objects: []
+  impulse: 0
+  destroy: {fileID: 1832613257}
 --- !u!1001 &231251563
 Prefab:
   m_ObjectHideFlags: 0
@@ -23065,7 +23065,7 @@ Prefab:
     - target: {fileID: 11100000, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_Animation
       value: 
-      objectReference: {fileID: 7400016, guid: f62467e4cf46549468070ca86b639add, type: 3}
+      objectReference: {fileID: 7400002, guid: f62467e4cf46549468070ca86b639add, type: 3}
     - target: {fileID: 100010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -25714,8 +25714,8 @@ Transform:
   m_Children:
   - {fileID: 1382384132}
   - {fileID: 1950956365}
-  - {fileID: 1791636608}
   - {fileID: 1737881500}
+  - {fileID: 1791636608}
   m_Father: {fileID: 1601346329}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28050,7 +28050,7 @@ Transform:
   - {fileID: 1281648125}
   - {fileID: 1600070061}
   m_Father: {fileID: 1592581844}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1745127662
 Prefab:
@@ -28757,7 +28757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1782538650
 Transform:
   m_ObjectHideFlags: 0
