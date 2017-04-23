@@ -22,7 +22,9 @@ public class Dialogue : MonoBehaviour {
 	public int uses = -1;
 
 	public void OnTriggerEnter(Collider col) {
+		print("Triggered");
 		if(uses != 0 && col.gameObject.tag == "Player" && !col.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled) {
+			print("Activated");
 			controller.BeginDialogue(root);
 			if(uses > 0) uses--;
 		}

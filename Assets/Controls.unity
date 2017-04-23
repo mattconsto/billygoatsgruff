@@ -6503,6 +6503,22 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: e3c05f2108f7db14a92889e3d1710076, type: 3}
   m_PrefabInternal: {fileID: 1271052628}
+--- !u!114 &227527909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 227527908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726d5669d8ec4fc4f856d6fbb0c9c2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
+  source: {fileID: 0}
+  objects: []
+  impulse: 0
+  destroy: {fileID: 1832613257}
 --- !u!54 &227527913
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6941,7 +6957,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 266635065}
-  m_LocalRotation: {x: -0.5152521, y: -0.11098876, z: -0.17895262, w: 0.83076626}
+  m_LocalRotation: {x: -0.5152522, y: -0.11098877, z: -0.17895263, w: 0.8307664}
   m_LocalPosition: {x: -119.88782, y: 26.762653, z: 134.60817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10180,15 +10196,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -849.31
+      value: -881.7
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39.61
+      value: 40.9
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -140
+      value: 76.3
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.x
@@ -10196,7 +10212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9998865
+      value: -0.1351183
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.z
@@ -10204,7 +10220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.015070187
+      value: 0.9908295
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_RootOrder
@@ -10224,7 +10240,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 178.27301
+      value: -15.531001
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.x
@@ -21380,7 +21396,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 5
   m_Center: {x: 0, y: 2.74, z: 0}
 --- !u!1 &1286338424
 GameObject:
@@ -23156,7 +23172,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1382384133}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 1.75
   m_Speed: 25
@@ -26014,7 +26030,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -866.4
+      value: -849.3
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26022,7 +26038,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 74.1
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.x
@@ -26130,7 +26146,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
+  m_Radius: 5
   m_Center: {x: 0, y: 2.74, z: 0}
 --- !u!1 &1601346328
 GameObject:
@@ -29032,15 +29048,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -859.01
+      value: -895.42
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 39.61
+      value: 41.76
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -136.6
+      value: -0.68
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.x
@@ -29048,7 +29064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9998865
+      value: 0.8887221
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.z
@@ -29056,11 +29072,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.015070187
+      value: -0.45844632
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_Animation
@@ -29076,7 +29092,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 178.27301
+      value: 234.574
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f62467e4cf46549468070ca86b639add, type: 3}
       propertyPath: m_LocalScale.x
@@ -29159,7 +29175,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791636609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfa75850960005341bcf92a46b001a43, type: 3}
   m_Name: 
@@ -29176,7 +29192,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1791636609}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 1.75
   m_Speed: 20
@@ -29218,6 +29234,58 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!135 &1791636614
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791636609}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 7.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1791636615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1791636609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cad1467df721e48bcc5050762745f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  root:
+    text: What's wrong pipsqueak?
+    clip: {fileID: 8300000, guid: 9c63f2dfdd348134f96d4a6a72354014, type: 3}
+    action: 1
+    target: {fileID: 0}
+    children:
+    - text: I dreamed of leaving this place, gaining my freedom, in a wide open space.
+      clip: {fileID: 8300000, guid: 136cc7ed3feb1fc4e8ecc1d8bdf44a44, type: 3}
+      action: 0
+      target: {fileID: 0}
+      children:
+      - text: Greener fields, wide open space? I'll follow you pipsqueak.
+        clip: {fileID: 8300000, guid: a12d0bcf439bfbc43b67061306931ff8, type: 3}
+        action: 6
+        target: {fileID: 1791636609}
+        children: []
+    - text: Um, we should leave the paddock and enter the forest.
+      clip: {fileID: 8300000, guid: 9e07d19a3b523524fa9a84b805166df9, type: 3}
+      action: 0
+      target: {fileID: 0}
+      children:
+      - text: Bah! That is stupid, this paddock is great. No dangers are lurking and
+          we've plenty to eat.
+        clip: {fileID: 8300000, guid: 2c047231dbea85243873f07e7223914d, type: 3}
+        action: 2
+        target: {fileID: 0}
+        children: []
+  uses: -1
 --- !u!1 &1792780916
 GameObject:
   m_ObjectHideFlags: 0
@@ -29622,7 +29690,7 @@ GameObject:
   - component: {fileID: 1832613258}
   - component: {fileID: 1832613260}
   - component: {fileID: 1832613259}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32027,7 +32095,7 @@ NavMeshAgent:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950956363}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 1.75
   m_Speed: 22.5
@@ -32063,7 +32131,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950956363}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dfa75850960005341bcf92a46b001a43, type: 3}
   m_Name: 
@@ -32074,6 +32142,59 @@ MonoBehaviour:
   jump: 3000
   rotation: 0.5
   _canJump: 0
+--- !u!135 &1950956369
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1950956363}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1950956370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1950956363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cad1467df721e48bcc5050762745f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  root:
+    text: What's that little goat?
+    clip: {fileID: 8300000, guid: 095bf153bfd4bf847adf77f7ba071c80, type: 3}
+    action: 1
+    target: {fileID: 0}
+    children:
+    - text: Last night I dreamed of a field, on a hill, with a bridge. We should find
+        it.
+      clip: {fileID: 8300000, guid: e2f51eb2c8ed26842a776500e448f254, type: 3}
+      action: 0
+      target: {fileID: 0}
+      children:
+      - text: 'Adventure you say, that sounds grand. I''ll follow you billy-goat,
+          across these lands. '
+        clip: {fileID: 8300000, guid: 06e79599d860ea9499227987ffa647ff, type: 3}
+        action: 6
+        target: {fileID: 1950956363}
+        children: []
+    - text: I want to leave, I'm bored of this place.
+      clip: {fileID: 8300000, guid: 1866545ff83bb4742b699ced47421ec2, type: 3}
+      action: 0
+      target: {fileID: 0}
+      children:
+      - text: Not right now, can't you see, I'm as busy, as can be!
+        clip: {fileID: 8300000, guid: 47f2a35b4d675c64fa3e8e35cac8ae4a, type: 3}
+        action: 2
+        target: {fileID: 0}
+        children: []
+  uses: -1
 --- !u!1 &1972174158
 GameObject:
   m_ObjectHideFlags: 0

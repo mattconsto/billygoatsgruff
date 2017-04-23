@@ -3,7 +3,6 @@ TODO
 
 # General
 
-* NPC Dialogue and scripting, goats need to join you
 * Playtest the game and the challenges
 * Polish and bug fix
 

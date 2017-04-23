@@ -51,15 +51,15 @@ public class GameController : MonoBehaviour {
 		_autofollow = new bool[players.Length];
 
 		_switchTimer = 0.25f;
-		foreach(GameObject player in players) {
-			// if(player.activeSelf) {
-				player.GetComponent<NavMeshAgent>().enabled = true;
-				player.GetComponent<NavMeshAgent>().isStopped = true;
-				player.GetComponent<PlayerController>().enabled = false;
-			// }
-		}
-		players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
-		players[_pointer].GetComponent<PlayerController>().enabled = true;
+		// foreach(GameObject player in players) {
+		// 	// if(player.activeSelf) {
+		// 		player.GetComponent<NavMeshAgent>().enabled = true;
+		// 		player.GetComponent<NavMeshAgent>().isStopped = true;
+		// 		player.GetComponent<PlayerController>().enabled = false;
+		// 	// }
+		// }
+		// players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
+		// players[_pointer].GetComponent<PlayerController>().enabled = true;
 	}
 
 	public void FixedUpdate() {
@@ -93,7 +93,7 @@ public class GameController : MonoBehaviour {
 			_switchTimer = 0.25f;
 			int i = 0;
 			foreach(GameObject player in players) {
-				if(player.activeSelf) {
+				if(player.activeSelf && (player.GetComponent<PlayerController>().enabled || player.GetComponent<NavMeshAgent>().enabled)) {
 					player.GetComponent<NavMeshAgent>().enabled = true;
 					player.GetComponent<NavMeshAgent>().isStopped = true;
 					player.GetComponent<PlayerController>().enabled = false;
@@ -101,23 +101,21 @@ public class GameController : MonoBehaviour {
 				_autofollow[i++] = false;
 			}
 
-			bool foundActive = false;
 			for(int j = 0; j < players.Length; j++) {
-				if(players[j].activeSelf) {
-					_pointer = (_pointer + 1 + j) % players.Length;
+				int k = (_pointer + 1 + j + players.Length) % players.Length;
+				if(players[k].activeSelf && (players[k].GetComponent<PlayerController>().enabled || players[k].GetComponent<NavMeshAgent>().enabled)) {
+					_pointer = k;
 					players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
 					players[_pointer].GetComponent<PlayerController>().enabled = true;
-					foundActive = true;
 				}
 			}
-			if(!foundActive) End();
 		}
 
 		if(state == State.GAME && Input.GetButton("Fire2") && _switchTimer <= 0) {
 			_switchTimer = 0.25f;
 			int i = 0;
 			foreach(GameObject player in players) {
-				if(player.activeSelf) {
+				if(player.activeSelf && (player.GetComponent<PlayerController>().enabled || player.GetComponent<NavMeshAgent>().enabled)) {
 					player.GetComponent<NavMeshAgent>().enabled = true;
 					player.GetComponent<NavMeshAgent>().isStopped = true;
 					player.GetComponent<PlayerController>().enabled = false;
@@ -125,22 +123,20 @@ public class GameController : MonoBehaviour {
 				_autofollow[i++] = false;
 			}
 
-			bool foundActive = false;
 			for(int j = 0; j < players.Length; j++) {
-				if(players[j].activeSelf) {
-					_pointer = (_pointer - 1 + j) % players.Length;
+				int k = (_pointer - 1 - j + players.Length) % players.Length;
+				if(players[j].activeSelf && (players[k].GetComponent<PlayerController>().enabled || players[k].GetComponent<NavMeshAgent>().enabled)) {
+					_pointer = k;
 					players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
 					players[_pointer].GetComponent<PlayerController>().enabled = true;
-					foundActive = true;
 				}
 			}
-			if(!foundActive) End();
 		}
 
 		if(state == State.GAME && _pathfindTimer <= 0 && Input.GetButton("Fire3")) {
 			_pathfindTimer = 0.5f; // Twice a second is enough
 			for(int i = 0; i < players.Length; i++) {
-				if(i == _pointer || !players[i].activeSelf) continue;
+				if(i == _pointer || players[i].activeSelf && !players[i].GetComponent<NavMeshAgent>().enabled) continue;
 				_autofollow[i] = true;
 
 				NavMeshAgent agent = players[i].GetComponent<NavMeshAgent>();
@@ -169,7 +165,7 @@ public class GameController : MonoBehaviour {
 		// Autofollow
 		if(state == State.GAME && _pathfindTimer <= 0) {
 			for(int i = 0; i < players.Length; i++) {
-				if(i == _pointer) continue;
+				if(i == _pointer || (!players[i].GetComponent<PlayerController>().enabled && !players[i].GetComponent<NavMeshAgent>().enabled)) continue;
 
 				float distance = Vector3.Distance(players[_pointer].transform.position, players[i].transform.position);
 
@@ -208,8 +204,8 @@ public class GameController : MonoBehaviour {
 
 	public void BeginDialogue(Message message) {
 		_vingetteTarget = 1;
-		dynamicCamera.GetComponent<CameraController>().cameraLocked = false;
-		dynamicCamera.GetComponent<CameraController>().cameraTarget.transform.Translate(Vector3.forward * 25);
+		// dynamicCamera.GetComponent<CameraController>().cameraLocked = false;
+		// dynamicCamera.GetComponent<CameraController>().cameraTarget.transform.Translate(Vector3.forward * 25);
 		_dialogueTimed = true;
 
 		state = State.DIALOGUE;
@@ -268,6 +264,14 @@ public class GameController : MonoBehaviour {
 					if(this.dialogue.target != null) this.dialogue.target.SetActive(false);
 					Cursor.visible = false;
 					break;
+				case MessageAction.JOIN:
+					gameHud.transform.Find("Panel").gameObject.SetActive(false);
+					Cursor.visible = false;
+					if(this.dialogue.target != null) {
+						this.dialogue.target.GetComponent<Dialogue>().enabled = false;
+						this.dialogue.target.GetComponent<NavMeshAgent>().enabled = true;
+					}
+					break;
 			}
 		}
 	}
@@ -294,6 +298,11 @@ public class GameController : MonoBehaviour {
 
 	public void End() {
 		state = State.END;
+		_vingetteTarget = 1;
+		hint = "The End";
+		hintText.text = hint;
+		time = Mathf.Infinity;
+		_hintTimer = time;
 		titleHud.transform.Find("Menu/Begin").GetComponent<Text>().text = "Restart";
 	}
 }
