@@ -184,6 +184,13 @@ public class GameController : MonoBehaviour {
 				}
 			}
 		}
+
+		// Check for all dead, and trigger game over
+		if(state == State.GAME) {
+			bool alive = false;
+			foreach(GameObject player in players) alive = alive || (player.activeSelf && player.GetComponent<PlayerController>().enabled);
+			if(!alive) End();
+		}
 	}
 
 	public void SetMessage(string message, float time) {

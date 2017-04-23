@@ -10,6 +10,7 @@ Third Party Notices
 
 ## Fonts
 
+* [Font Awesome by Dave Gandy (SIL OFL 1.1)](http://fontawesome.io/)
 * [Permanent Marker by Font Diner (Apache 2.0)](https://fonts.google.com/specimen/Permanent+Marker)
 * [Sketch Gothic School (Custom Non-Commercial, See PDF)](http://www.dafont.com/sketch-gothic-school.font)
 
@@ -69,4 +70,5 @@ Third Party Notices
 * [CC BY 3.0](https://creativecommons.org/licenses/by/3.0)
 * [CC BY NC 3.0](https://creativecommons.org/licenses/by-nc/3.0)
 * [MIT](https://opensource.org/licenses/MIT)
+* [SIL OFL 1.1](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 * [Unity Asset Store](https://unity3d.com/legal/as_terms)
