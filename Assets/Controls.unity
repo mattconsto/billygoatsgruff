@@ -715,7 +715,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 42523706}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1232,26 +1232,32 @@ MonoBehaviour:
     text: Hello! I am lost and in need of some help. Lets stay a while, just by ourselves.
     clip: {fileID: 8300000, guid: be99d412c889fc24583df6fa035adb86, type: 3}
     action: 0
+    target: {fileID: 0}
     children:
     - text: You may have heard tales of fields and trolls, but there is nothing but
         hardship if you continue along.
       clip: {fileID: 8300000, guid: 64b783c8e753c10449cab2f183bd5dd8, type: 3}
       action: 1
+      target: {fileID: 0}
       children:
       - text: I'm sorry doe, I'd love to stay. But our journey calls us, we are on
           our way.
         clip: {fileID: 8300000, guid: edd42572971bddf4f8095e646ec6d2ee, type: 3}
         action: 2
+        target: {fileID: 0}
         children: []
       - text: The journey is weary, we'd love to stay.
         clip: {fileID: 8300000, guid: 819dcf0473da8db4e83c1166972cd6f6, type: 3}
         action: 0
+        target: {fileID: 0}
         children:
         - text: For the little billy-goats the journey was over. Content to stay in
             the forest forever.
           clip: {fileID: 8300000, guid: e46ba6e4b664ef240bf54588913a806d, type: 3}
           action: 4
+          target: {fileID: 0}
           children: []
+  uses: 1
 --- !u!135 &83349912
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1746,7 +1752,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 118402040}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1941,7 +1947,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 127080515}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -5347,6 +5353,63 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 146815108}
+--- !u!1 &146815110 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
+  m_PrefabInternal: {fileID: 146815108}
+--- !u!114 &146815111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146815110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: The choice was clear, the journey over. The little billy-goat hid in a corner.
+  hint: The End
+  clip: {fileID: 8300000, guid: d9aa73546b1672b4198395bce522edd3, type: 3}
+  time: 1
+  uses: -1
+--- !u!114 &146815112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146815110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+--- !u!65 &146815113
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146815110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!114 &146815114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146815110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1 &149025375
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,7 +5808,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 170861482}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -5831,7 +5894,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179322050}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -6155,7 +6218,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 206600835}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -6878,7 +6941,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 266635065}
-  m_LocalRotation: {x: -0.5152522, y: -0.11098877, z: -0.17895263, w: 0.8307664}
+  m_LocalRotation: {x: -0.5152521, y: -0.11098876, z: -0.17895262, w: 0.83076626}
   m_LocalPosition: {x: -119.88782, y: 26.762653, z: 134.60817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7244,6 +7307,63 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 297342137}
+--- !u!1 &297342139 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
+  m_PrefabInternal: {fileID: 297342137}
+--- !u!114 &297342140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297342139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: The choice was clear, the journey over. The little billy-goat hid in a corner.
+  hint: The End
+  clip: {fileID: 8300000, guid: d9aa73546b1672b4198395bce522edd3, type: 3}
+  time: 1
+  uses: -1
+--- !u!114 &297342141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297342139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+--- !u!65 &297342142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297342139}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!114 &297342143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297342139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1 &298751062
 GameObject:
   m_ObjectHideFlags: 0
@@ -9271,7 +9391,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 463540826}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -9499,6 +9619,64 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 485777205}
+--- !u!1 &485777207 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
+  m_PrefabInternal: {fileID: 485777205}
+--- !u!114 &485777208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485777207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: For the little billy-goats the journey was over. Content to stay in the forest
+    forever.
+  hint: The End
+  clip: {fileID: 8300000, guid: e46ba6e4b664ef240bf54588913a806d, type: 3}
+  time: 1
+  uses: -1
+--- !u!114 &485777209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485777207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+--- !u!65 &485777210
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485777207}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!114 &485777211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485777207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1001 &487358318
 Prefab:
   m_ObjectHideFlags: 0
@@ -11288,6 +11466,63 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 596983539}
+--- !u!1 &596983541 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
+  m_PrefabInternal: {fileID: 596983539}
+--- !u!114 &596983542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596983541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: The choice was clear, the journey over. The little billy-goat hid in a corner.
+  hint: The End
+  clip: {fileID: 8300000, guid: d9aa73546b1672b4198395bce522edd3, type: 3}
+  time: 1
+  uses: -1
+--- !u!114 &596983543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596983541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+--- !u!65 &596983544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596983541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!114 &596983545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596983541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1 &597298854
 GameObject:
   m_ObjectHideFlags: 0
@@ -11479,6 +11714,21 @@ MonoBehaviour:
   clip: {fileID: 0}
   time: 5
   uses: -1
+--- !u!54 &609621660
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 609621656}
+  serializedVersion: 2
+  m_Mass: 3
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &611656968 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: e3c05f2108f7db14a92889e3d1710076, type: 3}
@@ -14000,7 +14250,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 768856484}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -15477,29 +15727,36 @@ MonoBehaviour:
     text: "Who\u2019s THAT tripping over my bridge?"
     clip: {fileID: 8300000, guid: b0d9f27ec9c64634f8f6af11f7822135, type: 3}
     action: 1
+    target: {fileID: 0}
     children:
     - text: "Oh! It\u2019s the second billy-goat Gruff, and I\u2019m going up to the
         hill-side to make myself fat."
       clip: {fileID: 8300000, guid: 961f5bf1b9f6e104abb5c30db0d8ae37, type: 3}
       action: 0
+      target: {fileID: 0}
       children:
       - text: "Now, I\u2019m coming to gobble you up."
         clip: {fileID: 8300000, guid: cdf49e3cd96bc2d4f92f899fb815062d, type: 3}
         action: 3
+        target: {fileID: 0}
         children:
         - text: And with that, the second billy-goat was no more.
           clip: {fileID: 8300000, guid: f32bfe624d202264c82f88f45d21fece, type: 3}
           action: 2
+          target: {fileID: 0}
           children: []
     - text: "Oh, no! don\u2019t take me, wait a little longer until the big billy-goat
         Gruff comes, he\u2019s much bigger."
       clip: {fileID: 8300000, guid: a082e2abcb0eab341b225e25daf25b94, type: 3}
       action: 0
+      target: {fileID: 0}
       children:
       - text: Very well! be off with you
         clip: {fileID: 8300000, guid: 84bd70655dd53834d98e8941f9718760, type: 3}
         action: 2
+        target: {fileID: 0}
         children: []
+  uses: -1
 --- !u!135 &869286159
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16256,6 +16513,63 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 911981027}
+--- !u!1 &911981029 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
+  m_PrefabInternal: {fileID: 911981027}
+--- !u!114 &911981030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911981029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: The choice was clear, the journey over. The little billy-goat hid in a corner.
+  hint: The End
+  clip: {fileID: 8300000, guid: d9aa73546b1672b4198395bce522edd3, type: 3}
+  time: 1
+  uses: -1
+--- !u!114 &911981031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911981029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+--- !u!65 &911981032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911981029}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!114 &911981033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 911981029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1 &918199132
 GameObject:
   m_ObjectHideFlags: 0
@@ -16388,7 +16702,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 935091857}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -16788,7 +17102,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 970826906}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -16947,6 +17261,64 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 986424733}
+--- !u!1 &986424735 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
+  m_PrefabInternal: {fileID: 986424733}
+--- !u!114 &986424736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986424735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: For the little billy-goats the journey was over. Content to stay in the forest
+    forever.
+  hint: The End
+  clip: {fileID: 8300000, guid: e46ba6e4b664ef240bf54588913a806d, type: 3}
+  time: 1
+  uses: -1
+--- !u!114 &986424737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986424735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+--- !u!65 &986424738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986424735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!114 &986424739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 986424735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1001 &988718115
 Prefab:
   m_ObjectHideFlags: 0
@@ -18568,7 +18940,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1073823996}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -20983,7 +21355,9 @@ MonoBehaviour:
     text: Go away little billy-goat, can't you see I'm eating.
     clip: {fileID: 8300000, guid: d5ebdc0ad2dc479479432cec1e5a0a99, type: 3}
     action: 2
+    target: {fileID: 0}
     children: []
+  uses: -1
 --- !u!65 &1281648128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22080,7 +22454,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1323631478}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -22243,7 +22617,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334489082}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -22452,29 +22826,36 @@ MonoBehaviour:
     text: "Who\u2019s that tripping over my bridge?"
     clip: {fileID: 8300000, guid: 3701e4e3f45937a4ea5ebc675af35c82, type: 3}
     action: 1
+    target: {fileID: 0}
     children:
     - text: "Oh! it is only I, the tiniest billy-goat Gruff; I\u2019m going up the
         hill-side to make myself fat"
       clip: {fileID: 8300000, guid: 48497c8f33fabfe4a84bc5584c943162, type: 3}
       action: 0
+      target: {fileID: 0}
       children:
       - text: "Now, I\u2019m coming to gobble you up."
         clip: {fileID: 8300000, guid: 93f40b0fc26d70e4f80b50f39ffc2c7b, type: 3}
         action: 3
+        target: {fileID: 0}
         children:
         - text: And with that, the tiniest billy-goat was no more.
           clip: {fileID: 8300000, guid: 2214d834d45b8e546a0bc3819059ee71, type: 3}
           action: 2
+          target: {fileID: 0}
           children: []
     - text: "Oh, no! pray don\u2019t take me. I\u2019m too little, that I am. Wait
         a bit till the second billy-goat Gruff comes, he\u2019s much bigger than I."
       clip: {fileID: 8300000, guid: c114c52919d876948a2079bf1604288e, type: 3}
       action: 0
+      target: {fileID: 0}
       children:
       - text: Well! be off with you
         clip: {fileID: 8300000, guid: 9db6ad16ce9b0694bbde3449e9951cec, type: 3}
         action: 2
+        target: {fileID: 0}
         children: []
+  uses: -1
 --- !u!135 &1358919029
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22766,7 +23147,7 @@ MonoBehaviour:
   controller: {fileID: 1745283055}
   camera: {fileID: 1068433181}
   speed: 25
-  jump: 650
+  jump: 1000
   rotation: 0.5
   _canJump: 0
 --- !u!195 &1382384135
@@ -24197,6 +24578,63 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 1472371766}
+--- !u!1 &1472371768 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
+  m_PrefabInternal: {fileID: 1472371766}
+--- !u!114 &1472371769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472371768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: The choice was clear, the journey over. The little billy-goat hid in a corner.
+  hint: The End
+  clip: {fileID: 8300000, guid: d9aa73546b1672b4198395bce522edd3, type: 3}
+  time: 1
+  uses: -1
+--- !u!114 &1472371770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472371768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+--- !u!65 &1472371771
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472371768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!114 &1472371772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472371768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1 &1484883595
 GameObject:
   m_ObjectHideFlags: 0
@@ -25513,7 +25951,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1596805953}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -25657,15 +26095,19 @@ MonoBehaviour:
     text: Hello, little billy-goat, go ahead, spit it out.
     clip: {fileID: 8300000, guid: 621d955c440dce846b40372bc7d7f2f4, type: 3}
     action: 0
+    target: {fileID: 0}
     children:
     - text: Last night I dreamed of leaving this place.
       clip: {fileID: 8300000, guid: 8db575ed89db44b49833191a60a18bb6, type: 3}
       action: 0
+      target: {fileID: 0}
       children:
       - text: We all dream of such silly things.
         clip: {fileID: 8300000, guid: 6b7e2cbd310f6a348ac8de4192ea1a9e, type: 3}
         action: 2
+        target: {fileID: 0}
         children: []
+  uses: -1
 --- !u!65 &1600070064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26367,6 +26809,63 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
   m_PrefabInternal: {fileID: 1637783722}
+--- !u!1 &1637783724 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 0b2361dcabd850b4eaf39974e1a6ed60, type: 3}
+  m_PrefabInternal: {fileID: 1637783722}
+--- !u!114 &1637783725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637783724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: The choice was clear, the journey over. The little billy-goat hid in a corner.
+  hint: The End
+  clip: {fileID: 8300000, guid: d9aa73546b1672b4198395bce522edd3, type: 3}
+  time: 1
+  uses: -1
+--- !u!114 &1637783726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637783724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f181104e18f5824faa40c76d4572573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+--- !u!65 &1637783727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637783724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Center: {x: 0, y: 2.8, z: 0}
+--- !u!114 &1637783728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1637783724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
 --- !u!1 &1648312504
 GameObject:
   m_ObjectHideFlags: 0
@@ -26928,7 +27427,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1689876900}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -27649,6 +28148,7 @@ MonoBehaviour:
     text: 
     clip: {fileID: 0}
     action: 0
+    target: {fileID: 0}
     children: []
   _dialogueTimer: 0
   _dialogueTimed: 0
@@ -27827,7 +28327,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1747609740}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -28336,7 +28836,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1783114273}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -28667,7 +29167,7 @@ MonoBehaviour:
   controller: {fileID: 1745283055}
   camera: {fileID: 1068433181}
   speed: 15
-  jump: 750
+  jump: 1000
   rotation: 0.5
   _canJump: 0
 --- !u!195 &1791636611
@@ -29772,7 +30272,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1852301414}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -30811,31 +31311,39 @@ MonoBehaviour:
     text: "WHO\u2019S THAT tramping over my bridge?"
     clip: {fileID: 8300000, guid: eaa788b653936b341ad129bb12f61622, type: 3}
     action: 0
+    target: {fileID: 0}
     children:
     - text: BAH IT IS I! THE BIG BILLY-GOAT GRUFF
       clip: {fileID: 8300000, guid: c271fc85c8fe15d4ebfdb47c264c8a89, type: 3}
       action: 0
+      target: {fileID: 0}
       children:
       - text: "Now, I\u2019m coming to gobble you up"
         clip: {fileID: 8300000, guid: 2e2492aedeae0024dbc22e037e9e3b84, type: 3}
         action: 0
+        target: {fileID: 0}
         children:
         - text: "Well, come along! I\u2019ve got two spears,"
           clip: {fileID: 8300000, guid: cbdd04e014b6f454cbd896fe3c3c672e, type: 3}
           action: 0
+          target: {fileID: 0}
           children:
           - text: "I\u2019ll poke your eyeballs out of your ears."
             clip: {fileID: 8300000, guid: b69fc69c888ad4f46b10769f2f31c293, type: 3}
             action: 0
+            target: {fileID: 0}
             children:
             - text: "I\u2019ve got besides two curling-stones,"
               clip: {fileID: 8300000, guid: c6444d569b3e65f46965c083767c0ce9, type: 3}
-              action: 3
+              action: 0
+              target: {fileID: 0}
               children:
               - text: "And I\u2019ll crush you to bits, body and bones."
                 clip: {fileID: 8300000, guid: 3673711e4eeefac4b9330ebae1085f97, type: 3}
-                action: 2
+                action: 3
+                target: {fileID: 514897000}
                 children: []
+  uses: -1
 --- !u!135 &1912908571
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -31233,7 +31741,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1939068090}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -31563,7 +32071,7 @@ MonoBehaviour:
   controller: {fileID: 1745283055}
   camera: {fileID: 1068433181}
   speed: 22.5
-  jump: 1500
+  jump: 3000
   rotation: 0.5
   _canJump: 0
 --- !u!1 &1972174158
@@ -31740,7 +32248,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1974488092}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -32855,7 +33363,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2079795087}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -33139,7 +33647,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2104544788}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1

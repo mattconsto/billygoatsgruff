@@ -93,38 +93,54 @@ public class GameController : MonoBehaviour {
 			_switchTimer = 0.25f;
 			int i = 0;
 			foreach(GameObject player in players) {
-				// if(player.activeSelf) {
+				if(player.activeSelf) {
 					player.GetComponent<NavMeshAgent>().enabled = true;
 					player.GetComponent<NavMeshAgent>().isStopped = true;
-					_autofollow[i++] = false;
 					player.GetComponent<PlayerController>().enabled = false;
-				// }
+				}
+				_autofollow[i++] = false;
 			}
-			_pointer = (_pointer + 1) % players.Length;
-			players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
-			players[_pointer].GetComponent<PlayerController>().enabled = true;
+
+			bool foundActive = false;
+			for(int j = 0; j < players.Length; j++) {
+				if(players[j].activeSelf) {
+					_pointer = (_pointer + 1 + j) % players.Length;
+					players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
+					players[_pointer].GetComponent<PlayerController>().enabled = true;
+					foundActive = true;
+				}
+			}
+			if(!foundActive) End();
 		}
 
 		if(state == State.GAME && Input.GetButton("Fire2") && _switchTimer <= 0) {
 			_switchTimer = 0.25f;
 			int i = 0;
 			foreach(GameObject player in players) {
-				// if(player.activeSelf) {
+				if(player.activeSelf) {
 					player.GetComponent<NavMeshAgent>().enabled = true;
 					player.GetComponent<NavMeshAgent>().isStopped = true;
-					_autofollow[i++] = false;
 					player.GetComponent<PlayerController>().enabled = false;
-				// }
+				}
+				_autofollow[i++] = false;
 			}
-			_pointer = (_pointer - 1 + players.Length) % players.Length;
-			players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
-			players[_pointer].GetComponent<PlayerController>().enabled = true;
+
+			bool foundActive = false;
+			for(int j = 0; j < players.Length; j++) {
+				if(players[j].activeSelf) {
+					_pointer = (_pointer - 1 + j) % players.Length;
+					players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
+					players[_pointer].GetComponent<PlayerController>().enabled = true;
+					foundActive = true;
+				}
+			}
+			if(!foundActive) End();
 		}
 
 		if(state == State.GAME && _pathfindTimer <= 0 && Input.GetButton("Fire3")) {
 			_pathfindTimer = 0.5f; // Twice a second is enough
 			for(int i = 0; i < players.Length; i++) {
-				if(i == _pointer) continue;
+				if(i == _pointer || !players[i].activeSelf) continue;
 				_autofollow[i] = true;
 
 				NavMeshAgent agent = players[i].GetComponent<NavMeshAgent>();
@@ -249,7 +265,7 @@ public class GameController : MonoBehaviour {
 					break;
 				case MessageAction.SUICIDE:
 					gameHud.transform.Find("Panel").gameObject.SetActive(false);
-					// players[_pointer].SetActive(false);
+					if(this.dialogue.target != null) this.dialogue.target.SetActive(false);
 					Cursor.visible = false;
 					break;
 			}
