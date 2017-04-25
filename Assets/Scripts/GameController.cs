@@ -107,6 +107,7 @@ public class GameController : MonoBehaviour {
 					_pointer = k;
 					players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
 					players[_pointer].GetComponent<PlayerController>().enabled = true;
+					break;
 				}
 			}
 		}
@@ -129,6 +130,7 @@ public class GameController : MonoBehaviour {
 					_pointer = k;
 					players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
 					players[_pointer].GetComponent<PlayerController>().enabled = true;
+					break;
 				}
 			}
 		}
@@ -188,8 +190,35 @@ public class GameController : MonoBehaviour {
 		// Check for all dead, and trigger game over
 		if(state == State.GAME) {
 			bool alive = false;
-			foreach(GameObject player in players) alive = alive || (player.activeSelf && player.GetComponent<PlayerController>().enabled);
-			if(!alive) End();
+			bool active = false;
+			foreach(GameObject player in players) {
+				active = active || (player.activeSelf && player.GetComponent<PlayerController>().enabled);
+				alive = alive || player.activeSelf;
+			}
+			if(!alive) {
+				End();
+			} else if(!active) {
+				_switchTimer = 0.25f;
+				int i = 0;
+				foreach(GameObject player in players) {
+					if(player.activeSelf && (player.GetComponent<PlayerController>().enabled || player.GetComponent<NavMeshAgent>().enabled)) {
+						player.GetComponent<NavMeshAgent>().enabled = true;
+						player.GetComponent<NavMeshAgent>().isStopped = true;
+						player.GetComponent<PlayerController>().enabled = false;
+					}
+					_autofollow[i++] = false;
+				}
+
+				for(int j = 0; j < players.Length; j++) {
+					int k = (_pointer + 1 + j + players.Length) % players.Length;
+					if(players[k].activeSelf && (players[k].GetComponent<PlayerController>().enabled || players[k].GetComponent<NavMeshAgent>().enabled)) {
+						_pointer = k;
+						players[_pointer].GetComponent<NavMeshAgent>().enabled = false;
+						players[_pointer].GetComponent<PlayerController>().enabled = true;
+						break;
+					}
+				}
+			}
 		}
 	}
 
@@ -233,9 +262,9 @@ public class GameController : MonoBehaviour {
 
 			Cursor.visible = false;
 		} else {
-			_dialogueTimer = this.dialogue.clip == null ? 5 : this.dialogue.clip.length*2;
+			_dialogueTimer = this.dialogue.clip == null ? 3 : this.dialogue.clip.length + 1;
 			_dialogueTimed = true;
-			SetHint(this.dialogue.text, this.dialogue.clip == null ? 5 : this.dialogue.clip.length*2);
+			SetHint(this.dialogue.text, this.dialogue.clip == null ? 3 : this.dialogue.clip.length + 1);
 			if(this.dialogue.clip == null) narrationSource.PlayOneShot(this.dialogue.clip, 1);
 
 			switch(this.dialogue.action) {
@@ -275,8 +304,11 @@ public class GameController : MonoBehaviour {
 					gameHud.transform.Find("Panel").gameObject.SetActive(false);
 					Cursor.visible = false;
 					if(this.dialogue.target != null) {
-						this.dialogue.target.GetComponent<Dialogue>().enabled = false;
+						this.dialogue.target.GetComponent<Dialogue>().uses = 0;
 						this.dialogue.target.GetComponent<NavMeshAgent>().enabled = true;
+						foreach(SphereCollider col in this.dialogue.target.GetComponents<SphereCollider>()) {
+							if(col.isTrigger) col.enabled = false;
+						}
 					}
 					break;
 			}

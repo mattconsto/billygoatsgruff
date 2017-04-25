@@ -14,11 +14,11 @@ public class FullscreenPlayMode : MonoBehaviour {
 	}
 
 	static void CheckPlayModeState() {
-		if (EditorApplication.isPlaying) {
-			FullScreenGameWindow();
-		} else {
-			CloseGameWindow();
-		}
+		// if (EditorApplication.isPlaying) {
+		// 	FullScreenGameWindow();
+		// } else {
+		// 	CloseGameWindow();
+		// }
 	}
 
 	static EditorWindow GetMainGameView() {

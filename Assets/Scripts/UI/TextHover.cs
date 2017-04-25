@@ -18,19 +18,19 @@ public class TextHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 	}
 
 	public void OnPointerEnter(PointerEventData ed) {
-		_textComponent.color = hoverColor;
-		_selectableComponent.Select();
+		if(_textComponent != null) _textComponent.color = hoverColor;
+		if(_selectableComponent != null) _selectableComponent.Select();
 	}
 
 	public void OnPointerExit(PointerEventData ed) {
-		_textComponent.color = _defaultColor;
+		if(_textComponent != null) _textComponent.color = _defaultColor;
 	}
 
 	public void OnSelect(BaseEventData ed) {
-		_textComponent.color = hoverColor;
+		if(_textComponent != null) _textComponent.color = hoverColor;
 	}
 
 	public void OnDeselect(BaseEventData ed) {
-		_textComponent.color = _defaultColor;
+		if(_textComponent != null) _textComponent.color = _defaultColor;
 	}
 }

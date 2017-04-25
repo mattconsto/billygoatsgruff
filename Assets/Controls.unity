@@ -5398,7 +5398,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 2.8, z: 0}
 --- !u!114 &146815114
 MonoBehaviour:
@@ -5627,7 +5627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &158043229
 Transform:
   m_ObjectHideFlags: 0
@@ -6512,8 +6512,8 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227527908}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
+  m_Mass: 10
+  m_Drag: 0.2
   m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 1
@@ -7368,7 +7368,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 2.8, z: 0}
 --- !u!114 &297342143
 MonoBehaviour:
@@ -9851,7 +9851,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 2.8, z: 0}
 --- !u!114 &485777211
 MonoBehaviour:
@@ -10917,8 +10917,8 @@ Terrain:
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 845d02600c679ca49bcfc864e4caf566, type: 2}
   m_TreeDistance: 750
-  m_TreeBillboardDistance: 25
-  m_TreeCrossFadeLength: 50
+  m_TreeBillboardDistance: 10
+  m_TreeCrossFadeLength: 75
   m_TreeMaximumFullLODCount: 0
   m_DetailObjectDistance: 0
   m_DetailObjectDensity: 0
@@ -11697,7 +11697,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 2.8, z: 0}
 --- !u!114 &596983545
 MonoBehaviour:
@@ -11743,8 +11743,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
-  m_SizeDelta: {x: 800, y: 180}
+  m_AnchoredPosition: {x: 0, y: -100}
+  m_SizeDelta: {x: 800, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597298856
 MonoBehaviour:
@@ -16744,7 +16744,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 2.8, z: 0}
 --- !u!114 &911981033
 MonoBehaviour:
@@ -16768,6 +16768,9 @@ GameObject:
   - component: {fileID: 918199133}
   - component: {fileID: 918199135}
   - component: {fileID: 918199134}
+  - component: {fileID: 918199138}
+  - component: {fileID: 918199137}
+  - component: {fileID: 918199136}
   m_Layer: 12
   m_Name: Block
   m_TagString: Untagged
@@ -16781,13 +16784,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 918199132}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.040016804, z: -0, w: 0.99919903}
   m_LocalPosition: {x: -178.3, y: 13.86, z: 16.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2625036, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1763409716}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 4.5870004, z: 0}
 --- !u!65 &918199134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16812,6 +16815,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gizmoPath: BlockGizmo.png
+--- !u!114 &918199136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918199132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39e99f87b71bec447821ae0752baaaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoPath: TextGizmo.png
+--- !u!114 &918199137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918199132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1745283055}
+  text: 
+  hint: Only the middle goat can jump the deadly spikes
+  clip: {fileID: 0}
+  time: 1
+  uses: -1
+--- !u!65 &918199138
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 918199132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 65, y: 57.3, z: 214.21}
+  m_Center: {x: 0, y: 27.79, z: 0}
 --- !u!1001 &935091855
 Prefab:
   m_ObjectHideFlags: 0
@@ -17664,7 +17708,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 2.8, z: 0}
 --- !u!114 &986424739
 MonoBehaviour:
@@ -21121,7 +21165,6 @@ GameObject:
   - component: {fileID: 1241661643}
   - component: {fileID: 1241661642}
   - component: {fileID: 1241661641}
-  - component: {fileID: 1241661644}
   - component: {fileID: 1241661645}
   m_Layer: 0
   m_Name: Time Trigger 8
@@ -21180,25 +21223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gizmoPath: UpGizmo.png
---- !u!114 &1241661644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1241661639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d410423991410174ebd480fcc3710349, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1745283055}
-  text: "The billy-goats went up to the hillside where they got so fat they were scarce
-    able to walk home again! And if the fat hasn\u2019t fallen off them, why they\u2019re
-    still fat; and so: Snip, snap, snout, This tale\u2019s told out."
-  hint: The End
-  clip: {fileID: 8300000, guid: ea9ac4bc3209f104bbb7f63a0bfa1060, type: 3}
-  time: Infinity
-  uses: -1
 --- !u!114 &1241661645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23429,7 +23453,7 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 1.75
-  m_Speed: 25
+  m_Speed: 40
   m_Acceleration: 10
   avoidancePriority: 40
   m_AngularSpeed: 180
@@ -24891,7 +24915,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 2.8, z: 0}
 --- !u!114 &1472371772
 MonoBehaviour:
@@ -26590,7 +26614,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616957095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -178.3, y: 15.2, z: 16.6}
+  m_LocalPosition: {x: -178.3, y: 12.67, z: 16.6}
   m_LocalScale: {x: 60, y: 1, z: 150}
   m_Children: []
   m_Father: {fileID: 1763409716}
@@ -27122,7 +27146,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 1.97, z: 1}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 2.8, z: 0}
 --- !u!114 &1637783728
 MonoBehaviour:
@@ -29436,7 +29460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1745283055}
   camera: {fileID: 1068433181}
-  speed: 15
+  speed: 23
   jump: 1000
   rotation: 0.5
   _canJump: 0
@@ -29449,7 +29473,7 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 1.75
-  m_Speed: 20
+  m_Speed: 35
   m_Acceleration: 10
   avoidancePriority: 40
   m_AngularSpeed: 180
@@ -32352,7 +32376,7 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 1.75
-  m_Speed: 22.5
+  m_Speed: 37.5
   m_Acceleration: 10
   avoidancePriority: 40
   m_AngularSpeed: 180
@@ -32392,7 +32416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1745283055}
   camera: {fileID: 1068433181}
-  speed: 22.5
+  speed: 24
   jump: 3000
   rotation: 0.5
   _canJump: 0
