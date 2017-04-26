@@ -10,4 +10,9 @@ public class DeathTrigger : MonoBehaviour {
 		if(source != null && clip != null) source.PlayOneShot(clip, 1);
 		col.gameObject.SetActive(false);
 	}
+
+	public void OnCollisionEnter(Collision col) {
+		if(source != null && clip != null) source.PlayOneShot(clip, 1);
+		col.gameObject.SetActive(false);
+	}
 }
