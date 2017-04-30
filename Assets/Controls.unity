@@ -1645,7 +1645,7 @@ MonoBehaviour:
   controller: {fileID: 1745283055}
   text: And with that, the gate slams shut. The path is clear with no turning back.
   hint: Use F or (B) to get your friends to follow
-  clip: {fileID: 8300000, guid: 5a89dd25f23582248bd2bf63fd340420, type: 3}
+  clip: {fileID: 8300000, guid: efe7c9649a62cb34e949ec9ccb902b14, type: 3}
   time: 5
   uses: 1
 --- !u!135 &115972847
@@ -6959,7 +6959,7 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 266635065}
-  m_LocalRotation: {x: -0.5152522, y: -0.11098877, z: -0.17895263, w: 0.8307664}
+  m_LocalRotation: {x: -0.5152521, y: -0.11098876, z: -0.17895262, w: 0.83076626}
   m_LocalPosition: {x: -119.88782, y: 26.762653, z: 134.60817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -10917,13 +10917,13 @@ Terrain:
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 845d02600c679ca49bcfc864e4caf566, type: 2}
   m_TreeDistance: 750
-  m_TreeBillboardDistance: 10
+  m_TreeBillboardDistance: 25
   m_TreeCrossFadeLength: 75
   m_TreeMaximumFullLODCount: 0
   m_DetailObjectDistance: 0
   m_DetailObjectDensity: 0
-  m_HeightmapPixelError: 50
-  m_SplatMapDistance: 500
+  m_HeightmapPixelError: 15
+  m_SplatMapDistance: 750
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 0
   m_DrawHeightmap: 1
@@ -20204,7 +20204,7 @@ Terrain:
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
-  m_HeightmapPixelError: 100
+  m_HeightmapPixelError: 50
   m_SplatMapDistance: 1500
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 0
@@ -28514,6 +28514,7 @@ MonoBehaviour:
   audioObjectB: {fileID: 506532411}
   currentTime: 0
   targetTime: 0
+  maxVolume: 1
   pointer: 8
   _machine:
   - music: {fileID: 8300000, guid: ff8ef32de20e2b5468f30f0dd214a33b, type: 3}

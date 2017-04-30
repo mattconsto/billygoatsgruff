@@ -265,7 +265,7 @@ public class GameController : MonoBehaviour {
 			_dialogueTimer = this.dialogue.clip == null ? 3 : this.dialogue.clip.length + 1;
 			_dialogueTimed = true;
 			SetHint(this.dialogue.text, this.dialogue.clip == null ? 3 : this.dialogue.clip.length + 1);
-			if(this.dialogue.clip == null) narrationSource.PlayOneShot(this.dialogue.clip, 1);
+			if(this.dialogue.clip != null) narrationSource.PlayOneShot(this.dialogue.clip, 1);
 
 			switch(this.dialogue.action) {
 				case MessageAction.NONE:
@@ -343,5 +343,6 @@ public class GameController : MonoBehaviour {
 		time = Mathf.Infinity;
 		_hintTimer = time;
 		titleHud.transform.Find("Menu/Begin").GetComponent<Text>().text = "Restart";
+		_dialogueTimed = false;
 	}
 }

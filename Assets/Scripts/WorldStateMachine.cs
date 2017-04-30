@@ -17,6 +17,7 @@ public class WorldStateMachine : MonoBehaviour {
 
 	public float currentTime;
 	public float targetTime;
+	public float maxVolume = 1;
 	public int pointer = 0;
 
 	public WorldState[] _machine;
@@ -40,8 +41,8 @@ public class WorldStateMachine : MonoBehaviour {
 		moonObject.transform.LookAt(Vector3.zero);
 
 		// Audio Crossfade
-		audioObjectA.volume = Mathf.Lerp(audioObjectA.volume, audioObject ? 1 : 0, 0.25f * Time.deltaTime);
-		audioObjectB.volume = Mathf.Lerp(audioObjectB.volume, audioObject ? 0 : 1, 0.25f * Time.deltaTime);
+		audioObjectA.volume = Mathf.Lerp(audioObjectA.volume, audioObject ? maxVolume : 0, 0.25f * Time.deltaTime);
+		audioObjectB.volume = Mathf.Lerp(audioObjectB.volume, audioObject ? 0 : maxVolume, 0.25f * Time.deltaTime);
 	}
 
 	public static float InterpolatedLerp(float a, float b, float t, float l) {
